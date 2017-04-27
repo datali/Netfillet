@@ -55,7 +55,7 @@ public class LoginServlet extends HttpServlet {
 		    	Customer customer = service.createUser();
 		    	HttpSession session = request.getSession();
 		    	session.setAttribute("Customer", customer);
-		        RequestDispatcher rd=request.getRequestDispatcher("/customerwelcome.jsp");  
+		        RequestDispatcher rd=request.getRequestDispatcher("/videos.jsp");  
 		        rd.forward(request,response); 
 		    }  
 		    else{  
