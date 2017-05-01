@@ -15,6 +15,7 @@ import com.entity.pkg.Customer;
 import com.entity.pkg.Employee;
 import com.service.pkg.CustomerService;
 import com.service.pkg.EmployeeService;
+import com.service.pkg.MovieService;
 import com.service.pkg.ValidateUser;
 
 /**
@@ -86,6 +87,15 @@ public class LoginServlet extends HttpServlet {
 		        rd.include(request,response);  
 		    }  
 	    }
+	    
+	    MovieService movieService = new MovieService();
+	    System.out.println(movieService.getAllMovies());
+	    //movieService.addMovie("Fast and furious","Thriller", 5, 5000.00 , 4);
+	    //System.out.println(movieService.getAllMovies());
+	    //movieService.deleteMovie(5);
+	    //System.out.println(movieService.getAllMovies());
+	    movieService.EditName(6, "Forest Gump");
+	    System.out.println(movieService.getAllMovies());
 
 	    
 	    	
