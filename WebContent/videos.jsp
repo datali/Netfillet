@@ -30,11 +30,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="full">
 			<div class="menu">
 				<ul>
-					<li><a href="index.html"><div class="hm"><i class="home1"></i><i class="home2"></i></div></a></li>
+					<!-- <li><a href="welcome.jspl"><div class="hm"><i class="home1"></i><i class="home2"></i></div></a></li> -->
 					<li><a class="active" href="videos.html"><div class="video"><i class="videos"></i><i class="videos1"></i></div></a></li>
-					<li><a href="reviews.html"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a></li>
-					<li><a href="404.html"><div class="bk"><i class="booking"></i><i class="booking1"></i></div></a></li>
-					<li><a href="contact.html"><div class="cnt"><i class="contact"></i><i class="contact1"></i></div></a></li>
+					<li><a href="reviews.jsp"><div class="cat"><i class="watching"></i><i class="watching1"></i></div></a></li>
+					<li><a href="404.jsp"><div class="bk"><i class="booking"></i><i class="booking1"></i></div></a></li>
+					<li><a href="contact.jsp"><div class="cnt"><i class="contact"></i><i class="contact1"></i></div></a></li>
 				</ul>
 			</div>
 		<div class="main">
@@ -88,7 +88,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
 							<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
 						</ul>
-						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
+						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Rent now</a>
 					</div>
 					<div id="small-dialog" class="mfp-hide">
 						<iframe  src="https://www.youtube.com/embed/2LqzF5WauAw" frameborder="0" allowfullscreen></iframe>
@@ -101,7 +101,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
 							<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
 						</ul>
-						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
+						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Rent now</a>
 					</div>
 					<div class="content-grid">
 						<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/gridallbum3.jpg" title="allbum-name" /></a>
@@ -111,7 +111,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
 							<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
 						</ul>
-						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
+						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Rent now</a>
 					</div>
 					<div class="content-grid last-grid">
 						<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/gridallbum4.jpg" title="allbum-name" /></a>
@@ -121,7 +121,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
 							<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
 						</ul>
-						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
+						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Rent now</a>
 					</div>
 					<div class="content-grid">
 						<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/gridallbum5.jpg" title="allbum-name" /></a>
@@ -131,7 +131,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
 							<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
 						</ul>
-						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
+						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Rent now</a>
 					</div>
 					<div class="content-grid">
 						<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/gridallbum6.jpg" title="allbum-name" /></a>
@@ -141,7 +141,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
 							<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
 						</ul>
-						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
+						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Rent now</a>
 					</div>
 					<div class="content-grid">
 						<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/gridallbum7.jpg" title="allbum-name" /></a>
@@ -151,7 +151,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
 							<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
 						</ul>
-						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
+						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Rent now</a>
 					</div>
 					<div class="content-grid last-grid">
 						<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/gridallbum8.jpg" title="allbum-name" /></a>
@@ -161,7 +161,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
 							<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
 						</ul>
-						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
+						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Rent now</a>
 					</div>
 					<div class="content-grid">
 						<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/gridallbum9.jpg" title="allbum-name" /></a>
@@ -171,7 +171,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
 							<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
 						</ul>
-						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
+						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Rent now</a>
 					</div>
 					<div class="content-grid">
 						<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/gridallbum10.jpg" title="allbum-name" /></a>
@@ -181,7 +181,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
 							<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
 						</ul>
-						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
+						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Rent now</a>
 					</div>
 					<div class="content-grid">
 						<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/gridallbum11.jpg" title="allbum-name" /></a>
@@ -191,7 +191,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
 							<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
 						</ul>
-						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
+						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Rent now</a>
 					</div>
 					<div class="content-grid last-grid">
 						<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><img src="images/gridallbum1.jpg" title="allbum-name" /></a>
@@ -201,7 +201,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<li><a href="#"><img src="images/views.png" title="image-name" /></a></li>
 							<li><a href="#"><img src="images/link.png" title="image-name" /></a></li>
 						</ul>
-						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Watch now</a>
+						<a class="button play-icon popup-with-zoom-anim" href="#small-dialog">Rent now</a>
 					</div>
 					<div class="clearfix"> </div>
 					<!---start-pagenation----->
