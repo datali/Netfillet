@@ -2,6 +2,10 @@ package com.controller.pkg;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -88,14 +92,35 @@ public class LoginServlet extends HttpServlet {
 		    }  
 	    }
 	    
-	    MovieService movieService = new MovieService();
-	    System.out.println(movieService.getAllMovies());
+//	    MovieService movieService = new MovieService();
+//	    System.out.println(movieService.getAllMovies());
 	    //movieService.addMovie("Fast and furious","Thriller", 5, 5000.00 , 4);
 	    //System.out.println(movieService.getAllMovies());
 	    //movieService.deleteMovie(5);
 	    //System.out.println(movieService.getAllMovies());
-	    movieService.EditName(6, "Forest Gump");
-	    System.out.println(movieService.getAllMovies());
+//	    movieService.EditName(6, "Forest Gump");
+//	    System.out.println(movieService.getAllMovies());
+//	    movieService.EditType(6, "Drama");
+//	    movieService.EditRating(6, 2);
+//	    movieService.EditDistrFee(6, 132);
+//	    movieService.EditNumCopies(6, 15);
+	    
+	    EmployeeService s = new EmployeeService();
+	    
+	    
+	    
+	    
+	    
+	    s.AddEmployee(444444444,java.sql.Date.valueOf("2017-03-08"), 15, 'e', "Philip", "Lewis", "135 Knowledge Lane", 11790, "5166668888");
+	    s.AddEmployee(333333333,java.sql.Date.valueOf("2011-09-01"), 30, 'e',"Smith", "John", "789 Peace Blvd.", 93536, "3154434321");
+	    s.AddEmployee(12345789,java.sql.Date.valueOf("2015-01-01"), 18, 'e', "Smith", "David", "123 College road", 11790, "5162152345");
+	    s.AddEmployee(789123456,java.sql.Date.valueOf("2000-02-09"), 50, 'm', "Warren", "David", "456 Sunken Street", 11790, "6316329987");
+	    
+	    
+	    
+//	    s.deleteEmployee(11);
+//	    s.deleteEmployee(12);
+	    
 
 	    
 	    	

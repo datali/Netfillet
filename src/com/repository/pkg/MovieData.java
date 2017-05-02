@@ -229,6 +229,86 @@ public static void EditName(int MovieId, String Name){
 	    
 	}
 
+public static void EditType(int MovieId, String Type){
+	
+	try
+    {
+    	
+      String query = "UPDATE Movie SET Type = '"+Type+"' WHERE MovieId = '"+MovieId+"'";
+      Statement st = createConnection().createStatement();
+      st.executeUpdate(query);
+      
+      st.close();
+    }
+    catch (Exception e)
+    {
+      System.err.println("Got an exception! ");
+      System.err.println(e.getMessage());
+    }
+    
+    
+}
+
+public static void EditRating(int MovieId, int Rating){
+	
+	try
+    {
+    	
+      String query = "UPDATE Movie SET Rating = '"+Rating+"' WHERE MovieId = '"+MovieId+"'";
+      Statement st = createConnection().createStatement();
+      st.executeUpdate(query);
+      
+      st.close();
+    }
+    catch (Exception e)
+    {
+      System.err.println("Got an exception! ");
+      System.err.println(e.getMessage());
+    }
+    
+    
+}
+
+public static void EditDistrFee(int MovieId, double DistrFee){
+	
+	try
+    {
+    	
+      String query = "UPDATE Movie SET DistrFee = '"+DistrFee+"' WHERE MovieId = '"+MovieId+"'";
+      Statement st = createConnection().createStatement();
+      st.executeUpdate(query);
+      
+      st.close();
+    }
+    catch (Exception e)
+    {
+      System.err.println("Got an exception! ");
+      System.err.println(e.getMessage());
+    }
+    
+    
+}
+
+public static void EditNumCopies(int MovieId, int NumCopies){
+	
+	try
+    {
+    	
+      String query = "UPDATE Movie SET NumCopies = '"+NumCopies+"' WHERE MovieId = '"+MovieId+"'";
+      Statement st = createConnection().createStatement();
+      st.executeUpdate(query);
+      
+      st.close();
+    }
+    catch (Exception e)
+    {
+      System.err.println("Got an exception! ");
+      System.err.println(e.getMessage());
+    }
+    
+    
+}
+
 
 	
 	

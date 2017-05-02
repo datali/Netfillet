@@ -71,6 +71,24 @@ public MovieService(){
 		MovieData.EditName(MovieId, Name);
 	}
 	
+	public static void EditType(int MovieId, String Type){
+		MovieData.EditType(MovieId, Type);
+	}
+	
+	public static void EditRating(int MovieId, int Rating){
+		MovieData.EditRating(MovieId, Rating);
+	}
+	
+	public static void EditDistrFee(int MovieId, double DistrFee){
+		MovieData.EditDistrFee(MovieId, DistrFee);
+	}
+	
+	public static void EditNumCopies(int MovieId, int NumCopies){
+		MovieData.EditNumCopies(MovieId, NumCopies);
+	}
+	
+	
+	
 	public void setId(int id){
 		this.id = id;
 	}
