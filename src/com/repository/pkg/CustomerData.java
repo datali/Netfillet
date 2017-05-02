@@ -414,6 +414,28 @@ public static void AddCustomer(int SSN, String Email, int Rating, String CreditC
     
 }
 
+public static void DeleteCustomer(int Id){
+	
+	try
+    {
+      	
+      String employeeQuery = "DELETE FROM Customer WHERE Id = '"+Id+"'";
+      String personQuery = "DELETE FROM Person WHERE SSN = '"+Id+"'";
+      Statement st = createConnection().createStatement();
+      st.executeUpdate(employeeQuery);
+      st.executeUpdate(personQuery);
+      
+      st.close();
+    }
+    catch (Exception e)
+    {
+      System.err.println("Got an exception! ");
+      System.err.println(e.getMessage());
+    }
+    
+    
+}
+
 	
 }
 

@@ -111,10 +111,12 @@ public class LoginServlet extends HttpServlet {
 	    
 	    
 	    
-	    s.AddEmployee(444444444,java.sql.Date.valueOf("2017-03-08"), 15, 'e', "Philip", "Lewis", "135 Knowledge Lane", 11790, "5166668888");
-	    s.AddEmployee(333333333,java.sql.Date.valueOf("2011-09-01"), 30, 'e',"Smith", "John", "789 Peace Blvd.", 93536, "3154434321");
-	    s.AddEmployee(12345789,java.sql.Date.valueOf("2015-01-01"), 18, 'e', "Smith", "David", "123 College road", 11790, "5162152345");
-	    s.AddEmployee(789123456,java.sql.Date.valueOf("2000-02-09"), 50, 'm', "Warren", "David", "456 Sunken Street", 11790, "6316329987");
+//	    s.AddEmployee(444444444,java.sql.Date.valueOf("2017-03-08"), 15, 'e', "Philip", "Lewis", "135 Knowledge Lane", 11790, "5166668888");
+//	    s.AddEmployee(333333333,java.sql.Date.valueOf("2011-09-01"), 30, 'e',"Smith", "John", "789 Peace Blvd.", 93536, "3154434321");
+//	    s.AddEmployee(12345789,java.sql.Date.valueOf("2015-01-01"), 18, 'e', "Smith", "David", "123 College road", 11790, "5162152345");
+//	    s.AddEmployee(789123456,java.sql.Date.valueOf("2000-02-09"), 50, 'm', "Warren", "David", "456 Sunken Street", 11790, "6316329987");
+	    
+	    
 	    
 	    
 	    
