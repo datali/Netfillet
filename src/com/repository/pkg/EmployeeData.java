@@ -19,7 +19,7 @@ public class EmployeeData {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	      Connection conn = DriverManager.getConnection(myUrl, "root", "Garces89");
+	      Connection conn = DriverManager.getConnection(myUrl, "root", "password");
 	      return conn;
 	}
 	
