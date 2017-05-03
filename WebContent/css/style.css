@@ -382,8 +382,9 @@ i.contact1 {
 	
 	cursor: pointer;
 	position: relative;
-	  width: 90%;
-  margin: 0 5%;
+	width: 90%;
+	height: 250px;
+  	margin: 0 5%;
 }
 /*** Navigation ***/
 .nbs-flexisel-nav-left {

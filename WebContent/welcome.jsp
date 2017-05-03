@@ -81,17 +81,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						plus-sized inflatable robot Baymax, and prodigy Hiro Hamada, who
 						team up with a group of friends to form a band of high-tech
 						heroes.</p>
-					<a class="video" href="#"><i class="video1"></i>WATCH TRAILER</a> <a
-						class="book" href="#"><i class="book1"></i>BOOK TICKET</a>
+					<a class="video" href="#"><i class="video1"></i>RENT MOVIE</a> 
+					<!-- <a class="book" href="#"><i class="book1"></i>BOOK TICKET</a> -->
 				</div>
 			</div>
 			<div class="review-slider">
 				<h3>User Movie queue</h3>
 				<ul id="flexiselDemo1">
-					<li><img src="images/r1.jpg" alt="" /></li>
-					<li><img src="images/r2.jpg" alt="" /></li>
+					<li><img src="images/poster_default.gif" alt="" /></li>
+					<li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-1.jpg" alt="" /></li>
 					<li><img src="images/r3.jpg" alt="" /></li>
-					<li><img src="images/r4.jpg" alt="" /></li>
+					<li><img src="images/poster_default.gif" alt="" /></li>
 					<li><img src="images/r5.jpg" alt="" /></li>
 					<li><img src="images/r6.jpg" alt="" /></li>
 				</ul>
@@ -145,7 +145,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="tile">
 							<div class="tile__media">
 								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-2.jpg"
+									src="images/poster_default.gif"
 									alt="" />
 							</div>
 							<div class="tile__details">
@@ -156,7 +156,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="tile">
 							<div class="tile__media">
 								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-3.jpg"
+									src="images/r5.jpg"
 									alt="" />
 							</div>
 							<div class="tile__details">
@@ -167,7 +167,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="tile">
 							<div class="tile__media">
 								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-4.jpg"
+									src="images/poster_default.gif"
 									alt="" />
 							</div>
 							<div class="tile__details">
