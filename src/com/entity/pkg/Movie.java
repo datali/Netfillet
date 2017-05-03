@@ -14,6 +14,10 @@ public class Movie {
 		this.movieId = MovieId;
 		
 	}
+	
+	public Movie(){
+		
+	}
 
 
 	public int getMovieId() {

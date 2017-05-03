@@ -19,7 +19,7 @@ public class CustomerData {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	      Connection conn = DriverManager.getConnection(myUrl, "root", "password");
+	      Connection conn = DriverManager.getConnection(myUrl, "root", "Garces89");
 	      return conn;
 	}
 	
@@ -386,22 +386,32 @@ public static ArrayList<Integer> movieQ(int customerId){
 	    return movieQ;
 }
 
-public static void AddCustomer(int SSN, String Email, int Rating, String CreditCardNumber, String FirstName, String LastName, String Address, int ZipCode, String Telephone){
+public static void AddCustomer(int SSN, String Email, int Rating, String CreditCardNumber, String FirstName, String LastName, String Address, String City, String State, int ZipCode, String Telephone){
 	
 	try
     {
 	
 	  
-	  Statement st = createConnection().createStatement();
-      String personQuery = "INSERT INTO Person (SSN, LastName, FirstName, Address, ZipCode, Telephone)" +
+	  
+	 Statement st = createConnection().createStatement();
+	 
+	 String locationQuery = "INSERT INTO Location (ZipCode, City, State)" +
+    		 "VALUES ('"+ZipCode+"','"+City+"','"+State+"')";
+   
+	 st.executeUpdate(locationQuery);
+      
+	 String personQuery = "INSERT INTO Person (SSN, LastName, FirstName, Address, ZipCode, Telephone)" +
        		 "VALUES ('"+SSN+"','"+LastName+"','"+FirstName+"','"+Address+"','"+ZipCode+"','"+Telephone+"')";
       
       st.executeUpdate(personQuery);
       
-      String customerQuery = "INSERT INTO Customer (CustomerId, , Email, Rating, CreditCardNumber)" +
+      String customerQuery = "INSERT INTO Customer (CustomerId, Email, Rating, CreditCardNumber)" +
        		 "VALUES ('"+SSN+"','"+Email+"','"+Rating+"','"+CreditCardNumber+"')";
       
       st.executeUpdate(customerQuery);
+      
+      
+      
       
       st.close();
     }
@@ -419,10 +429,10 @@ public static void DeleteCustomer(int Id){
 	try
     {
       	
-      String employeeQuery = "DELETE FROM Customer WHERE Id = '"+Id+"'";
+      String customerQuery = "DELETE FROM Customer WHERE CustomerId = '"+Id+"'";
       String personQuery = "DELETE FROM Person WHERE SSN = '"+Id+"'";
       Statement st = createConnection().createStatement();
-      st.executeUpdate(employeeQuery);
+      st.executeUpdate(customerQuery);
       st.executeUpdate(personQuery);
       
       st.close();
@@ -434,6 +444,126 @@ public static void DeleteCustomer(int Id){
     }
     
     
+}
+
+public static void EditFirstName(int Id, String FirstName){
+
+	try
+	{
+
+		String query = "UPDATE Person SET FirstName = '"+FirstName+"' WHERE SSN = '"+Id+"'";
+		Statement st = createConnection().createStatement();
+		st.executeUpdate(query);
+
+		st.close();
+	}
+	catch (Exception e)
+	{
+		System.err.println("Got an exception! ");
+		System.err.println(e.getMessage());
+	}
+
+
+}
+
+public static void EditLastName(int Id, String LastName){
+
+	try
+	{
+
+		String query = "UPDATE Person SET LastName = '"+LastName+"' WHERE SSN = '"+Id+"'";
+		Statement st = createConnection().createStatement();
+		st.executeUpdate(query);
+
+		st.close();
+	}
+	catch (Exception e)
+	{
+		System.err.println("Got an exception! ");
+		System.err.println(e.getMessage());
+	}
+
+
+}
+
+public static void EditAddress(int Id, String Address){
+
+	try
+	{
+
+		String query = "UPDATE Person SET Address = '"+Address+"' WHERE SSN = '"+Id+"'";
+		Statement st = createConnection().createStatement();
+		st.executeUpdate(query);
+
+		st.close();
+	}
+	catch (Exception e)
+	{
+		System.err.println("Got an exception! ");
+		System.err.println(e.getMessage());
+	}
+
+
+}
+
+public static void EditZipCode(int Id, int ZipCode){
+
+	try
+	{
+
+		String query = "UPDATE Person SET ZipCode = '"+ZipCode+"' WHERE SSN = '"+Id+"'";
+		Statement st = createConnection().createStatement();
+		st.executeUpdate(query);
+
+		st.close();
+	}
+	catch (Exception e)
+	{
+		System.err.println("Got an exception! ");
+		System.err.println(e.getMessage());
+	}
+
+
+}
+
+public static void EditTelephone(int Id, String Telephone){
+
+	try
+	{
+
+		String query = "UPDATE Person SET Telephone = '"+Telephone+"' WHERE SSN = '"+Id+"'";
+		Statement st = createConnection().createStatement();
+		st.executeUpdate(query);
+
+		st.close();
+	}
+	catch (Exception e)
+	{
+		System.err.println("Got an exception! ");
+		System.err.println(e.getMessage());
+	}
+
+
+}
+
+public static void EditSSN(int Id, int SSN){
+
+	try
+	{
+
+		String query = "UPDATE Customer SET CustomerId = '"+SSN+"' WHERE CustomerId = '"+Id+"'";
+		Statement st = createConnection().createStatement();
+		st.executeUpdate(query);
+
+		st.close();
+	}
+	catch (Exception e)
+	{
+		System.err.println("Got an exception! ");
+		System.err.println(e.getMessage());
+	}
+
+
 }
 
 	

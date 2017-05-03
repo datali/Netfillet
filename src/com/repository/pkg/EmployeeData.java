@@ -21,7 +21,7 @@ public class EmployeeData {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	      Connection conn = DriverManager.getConnection(myUrl, "root", "password");
+	      Connection conn = DriverManager.getConnection(myUrl, "root", "Garces89");
 	      return conn;
 	}
 	
@@ -129,7 +129,7 @@ public class EmployeeData {
 		String telephone = "";
 		    try
 		    {
-		      String query = "SELECT * FROM Person WHERE Id = '"+ssn+"' ";
+		      String query = "SELECT * FROM Person WHERE SSN = '"+ssn+"' ";
 		      Statement st = createConnection().createStatement();
 		      ResultSet rs = st.executeQuery(query);
 		      while (rs.next())
@@ -266,215 +266,215 @@ public class EmployeeData {
 	    return ssn;
 	  }
 	
-public static boolean isManager(int employeeId){
-		
+	public static boolean isManager(int employeeId){
+
 		boolean status = false;
 		String x = "";
-	    try
-	    {
-	      String query = "SELECT * FROM Employee WHERE Id = '"+employeeId+"' ";
-	      Statement st = createConnection().createStatement();
-	      ResultSet rs = st.executeQuery(query);
-	      while (rs.next())
-	      {
-	        x = rs.getString("position");
-	        if(x.equals("m"))
-	        	status = true;
-	        }
-	      st.close();
-	    }
-	    catch (Exception e)
-	    {
-	      System.err.println("Got an exception! ");
-	      System.err.println(e.getMessage());
-	    }
-	    
-	    return status;
-	  }
+		try
+		{
+			String query = "SELECT * FROM Employee WHERE Id = '"+employeeId+"' ";
+			Statement st = createConnection().createStatement();
+			ResultSet rs = st.executeQuery(query);
+			while (rs.next())
+			{
+				x = rs.getString("position");
+				if(x.equals("m"))
+					status = true;
+			}
+			st.close();
+		}
+		catch (Exception e)
+		{
+			System.err.println("Got an exception! ");
+			System.err.println(e.getMessage());
+		}
+
+		return status;
+	}
 
 
-public static void AddEmployee(int SSN, java.sql.Date Date, int HourlyRate, char Position, String FirstName, String LastName, String Address, int ZipCode, String Telephone){
-	
-	try
-    {
-	
-	  
-	  Statement st = createConnection().createStatement();
-      String personQuery = "INSERT INTO Person (SSN, LastName, FirstName, Address, ZipCode, Telephone)" +
-       		 "VALUES ('"+SSN+"','"+LastName+"','"+FirstName+"','"+Address+"','"+ZipCode+"','"+Telephone+"')";
-      
-      st.executeUpdate(personQuery);
-      
-      String employeeQuery = "INSERT INTO Employee (SSN, StartDate, HourlyRate, Position)" +
-       		 "VALUES ('"+SSN+"','"+Date+"','"+HourlyRate+"','"+Position+"')";
-      
-      st.executeUpdate(employeeQuery);
-      
-      st.close();
-    }
-    catch (Exception e)
-    {
-      System.err.println("Got an exception! ");
-      System.err.println(e.getMessage());
-    }
-    
-    
-}
+	public static void AddEmployee(int SSN, java.sql.Date Date, int HourlyRate, char Position, String FirstName, String LastName, String Address, int ZipCode, String Telephone){
 
-public static void DeleteEmployee(int Id){
-	
-	try
-    {
-      int ssn = ssn(Id);	
-      String employeeQuery = "DELETE FROM Employee WHERE Id = '"+Id+"'";
-      String personQuery = "DELETE FROM Person WHERE SSN = '"+ssn+"'";
-      Statement st = createConnection().createStatement();
-      st.executeUpdate(employeeQuery);
-      st.executeUpdate(personQuery);
-      
-      st.close();
-    }
-    catch (Exception e)
-    {
-      System.err.println("Got an exception! ");
-      System.err.println(e.getMessage());
-    }
-    
-    
-}
-
-public static void EditFirstName(int Id, String FirstName){
-	
-	try
-    {
-    	
-      String query = "UPDATE Person SET FirstName = '"+FirstName+"' WHERE Id = '"+Id+"'";
-      Statement st = createConnection().createStatement();
-      st.executeUpdate(query);
-      
-      st.close();
-    }
-    catch (Exception e)
-    {
-      System.err.println("Got an exception! ");
-      System.err.println(e.getMessage());
-    }
-    
-    
-}
-
-public static void EditLastName(int Id, String LastName){
-	
-	try
-    {
-    	
-      String query = "UPDATE Person SET LastName = '"+LastName+"' WHERE Id = '"+Id+"'";
-      Statement st = createConnection().createStatement();
-      st.executeUpdate(query);
-      
-      st.close();
-    }
-    catch (Exception e)
-    {
-      System.err.println("Got an exception! ");
-      System.err.println(e.getMessage());
-    }
-    
-    
-}
-
-public static void EditAddress(int Id, String Address){
-
-try
-{
-	
-  String query = "UPDATE Person SET Address = '"+Address+"' WHERE Id = '"+Id+"'";
-  Statement st = createConnection().createStatement();
-  st.executeUpdate(query);
-  
-  st.close();
-}
-catch (Exception e)
-{
-  System.err.println("Got an exception! ");
-  System.err.println(e.getMessage());
-}
+		try
+		{
 
 
-}
+			Statement st = createConnection().createStatement();
+			String personQuery = "INSERT INTO Person (SSN, LastName, FirstName, Address, ZipCode, Telephone)" +
+					"VALUES ('"+SSN+"','"+LastName+"','"+FirstName+"','"+Address+"','"+ZipCode+"','"+Telephone+"')";
 
-public static void EditZipCode(int Id, int ZipCode){
+			st.executeUpdate(personQuery);
 
-try
-{
-	
-  String query = "UPDATE Person SET ZipCode = '"+ZipCode+"' WHERE Id = '"+Id+"'";
-  Statement st = createConnection().createStatement();
-  st.executeUpdate(query);
-  
-  st.close();
-}
-catch (Exception e)
-{
-  System.err.println("Got an exception! ");
-  System.err.println(e.getMessage());
-}
+			String employeeQuery = "INSERT INTO Employee (SSN, StartDate, HourlyRate, Position)" +
+					"VALUES ('"+SSN+"','"+Date+"','"+HourlyRate+"','"+Position+"')";
 
+			st.executeUpdate(employeeQuery);
 
-}
-
-public static void EditTelephone(int Id, String Telephone){
-
-try
-{
-	
-  String query = "UPDATE Person SET Telephone = '"+Telephone+"' WHERE Id = '"+Id+"'";
-  Statement st = createConnection().createStatement();
-  st.executeUpdate(query);
-  
-  st.close();
-}
-catch (Exception e)
-{
-  System.err.println("Got an exception! ");
-  System.err.println(e.getMessage());
-}
+			st.close();
+		}
+		catch (Exception e)
+		{
+			System.err.println("Got an exception! ");
+			System.err.println(e.getMessage());
+		}
 
 
-}
+	}
 
-public static void EditSSN(int Id, int SSN){
+	public static void DeleteEmployee(int Id){
 
-try
-{
-	
-  String query = "UPDATE Employee SET SSN = '"+SSN+"' WHERE Id = '"+Id+"'";
-  Statement st = createConnection().createStatement();
-  st.executeUpdate(query);
-  
-  st.close();
-}
-catch (Exception e)
-{
-  System.err.println("Got an exception! ");
-  System.err.println(e.getMessage());
-}
+		try
+		{
+			int ssn = ssn(Id);	
+			String employeeQuery = "DELETE FROM Employee WHERE Id = '"+Id+"'";
+			String personQuery = "DELETE FROM Person WHERE SSN = '"+ssn+"'";
+			Statement st = createConnection().createStatement();
+			st.executeUpdate(employeeQuery);
+			st.executeUpdate(personQuery);
 
-
-}
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
+			st.close();
+		}
+		catch (Exception e)
+		{
+			System.err.println("Got an exception! ");
+			System.err.println(e.getMessage());
+		}
 
 
-	
+	}
+
+	public static void EditFirstName(int Id, String FirstName){
+
+		try
+		{
+
+			String query = "UPDATE Person SET FirstName = '"+FirstName+"' WHERE Id = '"+Id+"'";
+			Statement st = createConnection().createStatement();
+			st.executeUpdate(query);
+
+			st.close();
+		}
+		catch (Exception e)
+		{
+			System.err.println("Got an exception! ");
+			System.err.println(e.getMessage());
+		}
+
+
+	}
+
+	public static void EditLastName(int Id, String LastName){
+
+		try
+		{
+
+			String query = "UPDATE Person SET LastName = '"+LastName+"' WHERE Id = '"+Id+"'";
+			Statement st = createConnection().createStatement();
+			st.executeUpdate(query);
+
+			st.close();
+		}
+		catch (Exception e)
+		{
+			System.err.println("Got an exception! ");
+			System.err.println(e.getMessage());
+		}
+
+
+	}
+
+	public static void EditAddress(int Id, String Address){
+
+		try
+		{
+
+			String query = "UPDATE Person SET Address = '"+Address+"' WHERE SSN = '"+Id+"'";
+			Statement st = createConnection().createStatement();
+			st.executeUpdate(query);
+
+			st.close();
+		}
+		catch (Exception e)
+		{
+			System.err.println("Got an exception! ");
+			System.err.println(e.getMessage());
+		}
+
+
+	}
+
+	public static void EditZipCode(int Id, int ZipCode){
+
+		try
+		{
+
+			String query = "UPDATE Person SET ZipCode = '"+ZipCode+"' WHERE Id = '"+Id+"'";
+			Statement st = createConnection().createStatement();
+			st.executeUpdate(query);
+
+			st.close();
+		}
+		catch (Exception e)
+		{
+			System.err.println("Got an exception! ");
+			System.err.println(e.getMessage());
+		}
+
+
+	}
+
+	public static void EditTelephone(int Id, String Telephone){
+
+		try
+		{
+
+			String query = "UPDATE Person SET Telephone = '"+Telephone+"' WHERE Id = '"+Id+"'";
+			Statement st = createConnection().createStatement();
+			st.executeUpdate(query);
+
+			st.close();
+		}
+		catch (Exception e)
+		{
+			System.err.println("Got an exception! ");
+			System.err.println(e.getMessage());
+		}
+
+
+	}
+
+	public static void EditSSN(int Id, int SSN){
+
+		try
+		{
+
+			String query = "UPDATE Employee SET SSN = '"+SSN+"' WHERE Id = '"+Id+"'";
+			Statement st = createConnection().createStatement();
+			st.executeUpdate(query);
+
+			st.close();
+		}
+		catch (Exception e)
+		{
+			System.err.println("Got an exception! ");
+			System.err.println(e.getMessage());
+		}
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 

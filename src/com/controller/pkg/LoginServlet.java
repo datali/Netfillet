@@ -77,11 +77,11 @@ public class LoginServlet extends HttpServlet {
 		    	HttpSession session = request.getSession();
 		    	session.setAttribute("Employee", employee);
 		    	if(employee.isManager()){
-		    		RequestDispatcher rd=request.getRequestDispatcher("/managerwelcome.jsp");
+		    		RequestDispatcher rd=request.getRequestDispatcher("manager_admin/html/index.jsp");
 		    		rd.forward(request,response); 
 		    	}
 		    	else{
-		    		RequestDispatcher rd=request.getRequestDispatcher("/employeewelcome.jsp");  
+		    		RequestDispatcher rd=request.getRequestDispatcher("employee_admin/html/index.jsp");  
 		    		rd.forward(request,response); 
 		    	}
 		    }  
@@ -105,11 +105,11 @@ public class LoginServlet extends HttpServlet {
 //	    movieService.EditDistrFee(6, 132);
 //	    movieService.EditNumCopies(6, 15);
 	    
-	    EmployeeService s = new EmployeeService();
+	    //EmployeeService s = new EmployeeService();
 	    
-	    
-	    
-	    
+	    CustomerService s = new CustomerService();
+	   //s.AddCustomer(111111111, "syang@cs.sunysb.edu", 1, "1234567812345678", "Yang", "Shang", "123 Success Street", 11790, "5166328959");
+	    //s.DeleteCustomer(111111111);
 	    
 //	    s.AddEmployee(444444444,java.sql.Date.valueOf("2017-03-08"), 15, 'e', "Philip", "Lewis", "135 Knowledge Lane", 11790, "5166668888");
 //	    s.AddEmployee(333333333,java.sql.Date.valueOf("2011-09-01"), 30, 'e',"Smith", "John", "789 Peace Blvd.", 93536, "3154434321");

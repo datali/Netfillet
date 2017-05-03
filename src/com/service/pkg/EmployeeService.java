@@ -70,7 +70,7 @@ public EmployeeService(){
 		
 		String startDate = EmployeeData.startDate(id);
 		System.out.println(startDate);
-		employee.setCity(startDate);
+		employee.setStartDate(startDate);
 		
 		int hourlyRate = EmployeeData.hourlyRate(id);
 		System.out.println(hourlyRate);
@@ -78,7 +78,7 @@ public EmployeeService(){
 		
 		int ssn = EmployeeData.ssn(id);
 		System.out.println(ssn);
-		employee.setHourlyRate(ssn);
+		employee.setSsn(ssn);
 		
 		boolean status = EmployeeData.isManager(id);
 		System.out.println(status);

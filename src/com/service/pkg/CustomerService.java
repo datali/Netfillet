@@ -20,6 +20,11 @@ public CustomerService(int id){
 		
 		this.id = id;
 	}
+
+public CustomerService(){
+	
+	
+}
 	
 	public boolean customerExists(){
 		
@@ -95,6 +100,20 @@ public CustomerService(int id){
 		
 		
 		return customer;
+	}
+	
+	public void DeleteCustomer(int Id){
+		CustomerData.DeleteCustomer(Id);
+	}
+	
+	public static void AddCustomer(int SSN, String Email, int Rating, String CreditCardNumber, String FirstName, String LastName, String Address, String City, String State, int ZipCode, String Telephone){
+		CustomerData.AddCustomer(SSN, Email, Rating, CreditCardNumber, FirstName, LastName, Address,City, State, ZipCode, Telephone);
+		
+	{
+			
+			
+		}
+			
 	}
 
 }
