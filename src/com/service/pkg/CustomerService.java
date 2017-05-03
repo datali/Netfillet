@@ -92,6 +92,8 @@ public CustomerService(int id){
 		customer.setMovieQueue(movieQ);
 		
 		
+		
+		
 		return customer;
 	}
 

@@ -1,11 +1,13 @@
 package com.service.pkg;
 
+import java.sql.Date;
 import java.util.ArrayList;
 
 import com.entity.pkg.Customer;
 import com.entity.pkg.Employee;
 import com.repository.pkg.CustomerData;
 import com.repository.pkg.EmployeeData;
+import com.repository.pkg.MovieData;
 
 public class EmployeeService {
 	
@@ -22,6 +24,11 @@ public EmployeeService(int id){
 		
 		this.id = id;
 	}
+
+public EmployeeService(){
+	
+	
+}
 	
 	public boolean employeeExists(){
 		
@@ -79,5 +86,35 @@ public EmployeeService(int id){
 		
 		return employee;
 	}
-
+	
+	public static void AddEmployee(int SSN, java.sql.Date Date, int HourlyRate, char Position, String FirstName, String LastName, String Address, int ZipCode, String Telephone){
+		EmployeeData.AddEmployee(SSN, Date, HourlyRate, Position, FirstName,  LastName,  Address, ZipCode, Telephone);
+	}
+	
+	public void deleteEmployee(int id){
+		EmployeeData.DeleteEmployee(id);
+	}
+	
+	public void EditName(int Id, String First, String Last){
+		EmployeeData.EditFirstName(Id, First);
+		EmployeeData.EditLastName(Id, Last);
+	}
+	
+	public static void EditAddress(int Id, String Address){
+		EmployeeData.EditAddress(Id, Address);
+	}
+	
+	public static void EditZipCode(int Id, int ZipCode){
+		EmployeeData.EditZipCode(Id, ZipCode);
+	}
+	
+	public static void EditTelephone(int Id, String Telephone){
+		EmployeeData.EditTelephone(Id, Telephone);
+	}
+	
+	public static void EditSSN(int Id, int SSN){
+		EmployeeData.EditSSN(Id, SSN);
+	}
+	
+	
 }

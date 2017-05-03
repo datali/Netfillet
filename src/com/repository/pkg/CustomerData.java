@@ -386,6 +386,56 @@ public static ArrayList<Integer> movieQ(int customerId){
 	    return movieQ;
 }
 
+public static void AddCustomer(int SSN, String Email, int Rating, String CreditCardNumber, String FirstName, String LastName, String Address, int ZipCode, String Telephone){
+	
+	try
+    {
+	
+	  
+	  Statement st = createConnection().createStatement();
+      String personQuery = "INSERT INTO Person (SSN, LastName, FirstName, Address, ZipCode, Telephone)" +
+       		 "VALUES ('"+SSN+"','"+LastName+"','"+FirstName+"','"+Address+"','"+ZipCode+"','"+Telephone+"')";
+      
+      st.executeUpdate(personQuery);
+      
+      String customerQuery = "INSERT INTO Customer (CustomerId, , Email, Rating, CreditCardNumber)" +
+       		 "VALUES ('"+SSN+"','"+Email+"','"+Rating+"','"+CreditCardNumber+"')";
+      
+      st.executeUpdate(customerQuery);
+      
+      st.close();
+    }
+    catch (Exception e)
+    {
+      System.err.println("Got an exception! ");
+      System.err.println(e.getMessage());
+    }
+    
+    
+}
+
+public static void DeleteCustomer(int Id){
+	
+	try
+    {
+      	
+      String employeeQuery = "DELETE FROM Customer WHERE Id = '"+Id+"'";
+      String personQuery = "DELETE FROM Person WHERE SSN = '"+Id+"'";
+      Statement st = createConnection().createStatement();
+      st.executeUpdate(employeeQuery);
+      st.executeUpdate(personQuery);
+      
+      st.close();
+    }
+    catch (Exception e)
+    {
+      System.err.println("Got an exception! ");
+      System.err.println(e.getMessage());
+    }
+    
+    
+}
+
 	
 }
 
