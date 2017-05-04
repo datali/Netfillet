@@ -5,11 +5,17 @@ Netfillet is a relational database system to support the operations of an on-lin
 Netfillet uses HTML for the user interface, for the database server, and Java, Javascript, and JDBC for connectivity between the user interface and database server.
 
 
-Features
+Basic idea
 --------
 
 The basic idea behind Netfillet on-line movie rental system is that it will allow customers to use the web to browse/search the contents of your database (at least that part you want the customer to see) and to rent movies over the web. 
 In this regard, it is a lot like the on-line movie rental web sites Netflix and Amazon Video.
+
+Features
+--------
+* User-friendly UI
+* Easy managment
+
 
 Built With
 --------
