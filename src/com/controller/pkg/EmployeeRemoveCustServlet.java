@@ -41,11 +41,13 @@ public class EmployeeRemoveCustServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		PrintWriter out =  response.getWriter();
-		Enumeration<String> params = request.getParameterNames(); 
-		while(params.hasMoreElements()){
-			 String paramName = (String)params.nextElement();
-			 out.println("Parameter Name - "+paramName+", Value - "+request.getParameter(paramName));
+		int id = Integer.parseInt(request.getParameter("customerID"));
+		CustomerService service = new CustomerService(id);
+		if(service.customerExists()){  
+	    	service.DeleteCustomer(id);
 		}
+		RequestDispatcher rd=request.getRequestDispatcher("employee_admin/html/remove_customer.jsp");  
+		rd.forward(request,response); 
 	}
 
 	/**

@@ -2,6 +2,7 @@ package com.controller.pkg;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -15,6 +16,7 @@ import org.apache.jasper.tagplugins.jstl.core.Out;
 
 import com.entity.pkg.Customer;
 import com.entity.pkg.Employee;
+import com.repository.pkg.CustomerData;
 import com.service.pkg.CustomerService;
 import com.service.pkg.EmployeeService;
 import com.service.pkg.ValidateUser;
@@ -40,6 +42,12 @@ public class EmployeeMailingListServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		PrintWriter out =  response.getWriter();
+		ArrayList<ArrayList> rs_array = new ArrayList<ArrayList>();
+		rs_array = CustomerData.createMailingList();
+		HttpSession session = request.getSession();
+    	session.setAttribute("rs_array", rs_array);
+    	RequestDispatcher rd=request.getRequestDispatcher("employee_admin/html/create_customer_mailinglist.jsp");  
+		rd.forward(request,response);
 	}
 
 	/**

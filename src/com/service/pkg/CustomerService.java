@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import com.entity.pkg.Customer;
 import com.repository.pkg.CustomerData;
+import com.repository.pkg.EmployeeData;
 
 public class CustomerService {
 	
@@ -35,6 +36,10 @@ public CustomerService(){
 	public Customer createUser(){
 		
 		Customer customer = new Customer();
+		
+		int id = CustomerData.id(this.id);
+		System.out.println(id);
+		customer.setId(id);
 		
 		String email = CustomerData.email(id);
 		System.out.println(email);
@@ -109,11 +114,60 @@ public CustomerService(){
 	public static void AddCustomer(int SSN, String Email, int Rating, String CreditCardNumber, String FirstName, String LastName, String Address, String City, String State, int ZipCode, String Telephone){
 		CustomerData.AddCustomer(SSN, Email, Rating, CreditCardNumber, FirstName, LastName, Address,City, State, ZipCode, Telephone);
 		
-	{
-			
-			
-		}
-			
 	}
+	
+	public void EditName(int Id, String First, String Last){
+		CustomerData.EditFirstName(Id, First);
+		CustomerData.EditLastName(Id, Last);
+	}
+	
+	public void EditAddress(int Id, String Address){
+		CustomerData.EditAddress(Id, Address);
+	}
+	
+	public void EditZipCode(int Id, int ZipCode){
+		CustomerData.EditZipCode(Id, ZipCode);
+	}
+	
+	public void EditTelephone(int Id, String Telephone){
+		CustomerData.EditTelephone(Id, Telephone);
+	}
+	
+	public void EditSSN(int Id, int SSN){
+		CustomerData.EditSSN(Id, SSN);
+	}
+	
+	public void EditEmail(int Id, String email){
+		CustomerData.EditEmail(Id, email);
+	}
+	
+	public void EditRating(int Id, int rating){
+		CustomerData.EditRating(Id, rating);
+	
+	}
+	
+	public void EditCreditCardNum(int Id, String creditCardNum){
+		CustomerData.EditCreditCardNum(Id, creditCardNum);
+	
+	}
+	
+	public void EditCity(int Id, String City){
+		CustomerData.EditCity(Id, City);
+	}
+	
+	public void EditState(int Id, String State){
+		CustomerData.EditState(Id, State);
+		
+	}
+	
 
 }
+		
+	
+			
+			
+		
+			
+	
+
+

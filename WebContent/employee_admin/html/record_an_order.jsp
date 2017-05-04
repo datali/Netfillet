@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
     <!-- Bootstrap Core CSS -->
-    <link href="../../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<c:url value="/bootstrap/dist/css/bootstrap.min.css" />" rel="stylesheet">
     <!-- Menu CSS -->
-    <link href="../../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <link href="<c:url value="/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" />" rel="stylesheet">
     <!-- toast CSS -->
-    <link href="../../plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <link href="<c:url value="/plugins/bower_components/toast-master/css/jquery.toast.css" />" rel="stylesheet">
+    
     <!-- morris CSS -->
-    <link href="../../plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="<c:url value="/plugins/bower_components/morrisjs/morris.css" />" rel="stylesheet">
+        
     <!-- chartist CSS -->
-    <link href="../../plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
-    <link href="../../plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href="<c:url value="/plugins/bower_components/chartist-js/dist/chartist.min.css" />" rel="stylesheet">
+    <link href="<c:url value="/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" />" rel="stylesheet">
     <!-- animation CSS -->
-    <link href="../../css/animate.css" rel="stylesheet">
+    <link href="<c:url value="/css/animate.css" />" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="../../css/yan.css" rel="stylesheet">
+    <link href="<c:url value="/css/yan.css" />" rel="stylesheet">
     <!-- color CSS -->
-    <link href="../../css/default.css" id="theme" rel="stylesheet">
+    <link href="<c:url value="/css/default.css" />" rel="stylesheet">
+    
+    
 <![endif]-->
 </head>
 
@@ -47,22 +50,22 @@
                         <a href="index.jsp" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Welcome</a>
                     </li>
                     <li>
-                        <a href="record_an_order.html" class="active" class="waves-effect"><i class="fa fa-circle-thin fa-fw" aria-hidden="true"></i>Record an order</a>
+                        <a href="${pageContext.request.contextPath}/record_an_order.jsp" class="active" class="waves-effect"><i class="fa fa-circle-thin fa-fw" aria-hidden="true"></i>Record an order</a>
                     </li>
                     <li>
-                        <a href="add_customer.html" class="waves-effect"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>Add customer</a>
+                        <a href="employee_admin/html/add_customer.jsp" class="waves-effect"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>Add customer</a>
                     </li>
                     <li>
-                        <a href="edit_customer.html" class="waves-effect"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit customer</a>
+                        <a href="employee_admin/html/edit_customer.jsp" class="waves-effect"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit customer</a>
                     </li>
                     <li>
-                        <a href="remove_customer.html" class="waves-effect"><i class="fa fa-minus-circle fa-fw" aria-hidden="true"></i>Remove customer</a>
+                        <a href="employee_admin/html/remove_customer.jsp" class="waves-effect"><i class="fa fa-minus-circle fa-fw" aria-hidden="true"></i>Remove customer</a>
                     </li>
                     <li>
-                        <a href="create_customer_mailinglist.html" class="waves-effect"><i class="fa fa-list fa-fw" aria-hidden="true"></i>Create customer list</a>
+                        <a href="employee_admin/html/create_customer_mailinglist.jsp" class="waves-effect"><i class="fa fa-list fa-fw" aria-hidden="true"></i>Create customer list</a>
                     </li>
                     <li>
-                        <a href="create_movie_suggestion_list.html" class="waves-effect"><i class="fa fa-list fa-fw" aria-hidden="true"></i>Create movie suggestion</a>
+                        <a href="employee_admin/html/create_movie_suggestion_list.jsp" class="waves-effect"><i class="fa fa-list fa-fw" aria-hidden="true"></i>Create movie suggestion</a>
                     </li>
 
                 </ul>

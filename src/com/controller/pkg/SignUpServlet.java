@@ -2,10 +2,7 @@ package com.controller.pkg;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -23,18 +20,17 @@ import com.service.pkg.CustomerService;
 import com.service.pkg.EmployeeService;
 import com.service.pkg.ValidateUser;
 
-
 /**
  * Servlet implementation class LoginServlet
  */
-@WebServlet("/EmployeeEditCustServlet")
-public class EmployeeEditCustServlet extends HttpServlet {
+@WebServlet("/EmployeeRemoveCustServlet")
+public class SignUpServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public EmployeeEditCustServlet() {
+    public SignUpServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -45,29 +41,30 @@ public class EmployeeEditCustServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		PrintWriter out =  response.getWriter();
+		Enumeration<String> params = request.getParameterNames(); 
+		while(params.hasMoreElements()){
+			 String paramName = (String)params.nextElement();
+			 if(!request.getParameter(paramName).equals("")){
+				 out.print("Please Enter All Field");
+				 break;
+			 }
+		}
+		CustomerService custService = new CustomerService();
+		//populate  customer object
+		Customer customer = custService.createUser();		
+		customer.setAccountId(Integer.parseInt(request.getParameter("ssn")));
+		customer.setFirstName(request.getParameter("fname"));
+		customer.setLastName(request.getParameter("lname"));
+		customer.setCity(request.getParameter("city"));
+		customer.setState(request.getParameter("state"));
+		customer.setEmail(request.getParameter("email"));
+		customer.setAddress(request.getParameter("address"));
+		customer.setCreditCardNum(request.getParameter("creditcard"));
 		
-		//Enumeration<String> params = request.getParameterNames(); 
-//		ArrayList<String> parameters = new ArrayList<String>();
-//		
-//		while(params.hasMoreElements()){
-//			 String paramName = (String)params.nextElement();
-//			 parameters.add(request.getParameter(paramName));
-//			 
-//			 }
+		// to do *** add to server
 		
-		CustomerService service = new CustomerService(Integer.parseInt(request.getParameter("customerID")));
-	    if(service.customerExists()){  
-	    	Customer customer = service.createUser();
-	    	HttpSession session = request.getSession();
-	    	session.setAttribute("Customer", customer);
-	    	RequestDispatcher rd=request.getRequestDispatcher("employee_admin/html/edit_customer.jsp");  
-    		rd.forward(request,response); 
-	    }
-	    else{  
-	    	
-	        RequestDispatcher rd=request.getRequestDispatcher("/employee_admin/html/CustomerEditValidation.jsp");  
-	        rd.include(request,response);  
-	    }  
+		// plan for account
+		String plan = request.getParameter("plan");
 	}
 
 	/**

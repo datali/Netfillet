@@ -45,16 +45,19 @@ public class EmployeeAddCustServlet extends HttpServlet {
 		PrintWriter out =  response.getWriter();
 		Enumeration<String> params = request.getParameterNames(); 
 		ArrayList<String> parameters = new ArrayList<String>();
-			while(params.hasMoreElements()){
+	
+		while(params.hasMoreElements()){
 			 String paramName = (String)params.nextElement();
 			 parameters.add(request.getParameter(paramName));
 			 
-		}
+			 }
 		
 		CustomerService custService = new CustomerService();
+		
+			
 		custService.AddCustomer(Integer.parseInt(parameters.get(0)), parameters.get(1), Integer.parseInt(parameters.get(2)),parameters.get(3), parameters.get(4), parameters.get(5), parameters.get(6), (parameters.get(7)), parameters.get(8), Integer.parseInt(parameters.get(9)), parameters.get(10));
-    	//HttpSession session = request.getSession();
-    	RequestDispatcher rd=request.getRequestDispatcher("employee_admin/html/add_customer.jsp");  
+    	HttpSession session = request.getSession();
+    	RequestDispatcher rd=request.getRequestDispatcher("/employee_admin/html/add_customer.jsp");  
         rd.forward(request,response); 
 	}
 

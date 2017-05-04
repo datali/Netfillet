@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
     <!-- Bootstrap Core CSS -->
-    <link href="../../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<c:url value="/bootstrap/dist/css/bootstrap.min.css" />" rel="stylesheet">
     <!-- Menu CSS -->
-    <link href="../../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <link href="<c:url value="/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" />" rel="stylesheet">
     <!-- toast CSS -->
-    <link href="../../plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <link href="<c:url value="/plugins/bower_components/toast-master/css/jquery.toast.css" />" rel="stylesheet">
+    
     <!-- morris CSS -->
-    <link href="../../plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <link href="<c:url value="/plugins/bower_components/morrisjs/morris.css" />" rel="stylesheet">
+        
     <!-- chartist CSS -->
-    <link href="../../plugins/bower_components/chartist-js/dist/chartist.min.css" rel="stylesheet">
-    <link href="../../plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">
+    <link href="<c:url value="/plugins/bower_components/chartist-js/dist/chartist.min.css" />" rel="stylesheet">
+    <link href="<c:url value="/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" />" rel="stylesheet">
     <!-- animation CSS -->
-    <link href="../../css/animate.css" rel="stylesheet">
+    <link href="<c:url value="/css/animate.css" />" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="../../css/yan.css" rel="stylesheet">
+    <link href="<c:url value="/css/yan.css" />" rel="stylesheet">
     <!-- color CSS -->
-    <link href="../../css/default.css" id="theme" rel="stylesheet">
+    <link href="<c:url value="/css/default.css" />" rel="stylesheet">
+    
+    
 <![endif]-->
 </head>
 
@@ -44,49 +47,49 @@
                 </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
-                        <a href="index.jsp" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Welcome</a>
+                        <a href="/FinalProject305/manager_admin/html/index.jsp" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Welcome</a>
                     </li>
                     <li>
-                        <a href="add_movie.html" class="waves-effect"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>Add Movie</a>
+                        <a href="/FinalProject305/manager_admin/html/add_movie.jsp" class="waves-effect"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>Add Movie</a>
                     </li>
                     <li>
-                        <a href="edit_movie.html" class="waves-effect"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit Movie</a>
+                        <a href="/FinalProject305/manager_admin/html/edit_movie.jsp" class="waves-effect"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit Movie</a>
                     </li>
                     <li>
-                        <a href="remove_movie.html" class="waves-effect"><i class="fa fa-minus-circle fa-fw" aria-hidden="true"></i>Remove Movie</a>
+                        <a href="/FinalProject305/manager_admin/html/remove_movie.jsp" class="waves-effect"><i class="fa fa-minus-circle fa-fw" aria-hidden="true"></i>Remove Movie</a>
                     </li>
                     <li>
-                        <a href="add_employee.html" class="waves-effect"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>Add Employee</a>
+                        <a href="/FinalProject305/manager_admin/html/add_employee.jsp" class="waves-effect"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>Add Employee</a>
                     </li>
                     <li>
-                        <a href="edit_employee.html" class="waves-effect"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit Employee</a>
+                        <a href="/FinalProject305/manager_admin/html/edit_employee.jsp" class="waves-effect"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit Employee</a>
                     </li>
                     <li>
-                        <a href="remove_employee.html" class="waves-effect"><i class="fa fa-minus-circle fa-fw" aria-hidden="true"></i>Remove Employee</a>
+                        <a href="/FinalProject305/manager_admin/html/remove_employee.jsp" class="active" class="waves-effect"><i class="fa fa-minus-circle fa-fw" aria-hidden="true"></i>Remove Employee</a>
                     </li>
                     <li>
-                        <a href="obtain_sales_report.html" class="waves-effect"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i>Create Sales Report</a>
+                        <a href="/FinalProject305/manager_admin/html/obtain_sales_report.jsp" class="waves-effect"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i>Create Sales Report</a>
                     </li>
                     <li>
-                        <a href="create_all_movies_comprehensive_list.html" class="waves-effect"><i class="fa fa-database fa-fw" aria-hidden="true"></i>Comprehensive Movie List</a>
+                        <a href="/FinalProject305/manager_admin/html/create_all_movies_comprehensive_list.jsp" class="waves-effect"><i class="fa fa-database fa-fw" aria-hidden="true"></i>Comprehensive Movie List</a>
                     </li>
                     <li>
-                        <a href="create_all_movies_list_by_movie_name.html" class="waves-effect"><i class="fa fa-sort-alpha-asc fa-fw" aria-hidden="true"></i>Movie List by Name</a>
+                        <a href="/FinalProject305/manager_admin/html/create_all_movies_list_by_movie_name.jsp" class="waves-effect"><i class="fa fa-sort-alpha-asc fa-fw" aria-hidden="true"></i>Movie List by Name</a>
                     </li>
                     <li>
-                        <a href="create_all_movies_list_by_movie_type.html" class="waves-effect"><i class="fa fa-sitemap fa-fw" aria-hidden="true"></i>Movie List by Type</a>
+                        <a href="/FinalProject305/manager_admin/html/create_all_movies_list_by_movie_type.jsp" class="waves-effect"><i class="fa fa-sitemap fa-fw" aria-hidden="true"></i>Movie List by Type</a>
                     </li>
                     <li>
-                        <a href="create_all_movies_list_by_customer_name.html" class="active" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Movie List by Customer Name</a>
+                        <a href="/FinalProject305/manager_admin/html/create_all_movies_list_by_customer_name.jsp" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Movie List by Customer Name</a>
                     </li>
                     <li>
-                        <a href="most_oversaw_transaction_employee.html" class="waves-effect"><i class="fa fa-star fa-fw" aria-hidden="true"></i>Most Transaction Oversawed Customer Representative</a>
+                        <a href="/FinalProject305/manager_admin/html/most_oversaw_transaction_employee.jsp" class="waves-effect"><i class="fa fa-star fa-fw" aria-hidden="true"></i>Most Transaction Oversawed Customer Representative</a>
                     </li>
                     <li>
-                        <a href="most_active_customer_list.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Most Active Customers</a>
+                        <a href="/FinalProject305/manager_admin/html/most_active_customer_list.jsp" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Most Active Customers</a>
                     </li>
                      <li>
-                        <a href="most_rented_movie_list.html" class="waves-effect"><i class="fa fa-line-chart fa-fw" aria-hidden="true"></i>Most Rented Movies</a>
+                        <a href="/FinalProject305/manager_admin/html/most_rented_movie_list.jsp" class="waves-effect"><i class="fa fa-line-chart fa-fw" aria-hidden="true"></i>Most Rented Movies</a>
                     </li>
                     
                 </ul>
@@ -101,22 +104,22 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Movie List by Customer Name</h4> </div>
+                        <h4 class="page-title">Remove Employee</h4> </div>
                 </div>
                 <!-- /.row -->
                 <!-- .row -->
                 <div class="row">
                     <div class="col-md-8 col-xs-12">
                         <div class="white-box">
-                            <form action="/FinalProject305/ManagerMovieListByCustNameServlet" role="form" class="form-horizontal form-material" method="POST">
+                            <form action="/FinalProject305/ManagerRemoveEmployeeServlet" role="form" class="form-horizontal form-material" method="POST">
                                 <div class="form-group">
-                                    <label class="col-md-12">Customer Name</label>
+                                    <label class="col-md-12">SSN</label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-line" name=""> </div>
+                                        <input type="text" class="form-control form-control-line" name="ssn"> </div>
                                 </div>
                              	<div class="form-group">
                                     <div class="col-sm-12">
-                                        <input type="submit" value="Create List" class="btn">
+                                        <input type="submit" value="Remove Employee" class="btn btn-success">
                                     </div>
                                 </div>
                             </form>

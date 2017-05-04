@@ -20,6 +20,26 @@ public class Customer implements Serializable {
 	private int accountId;
 	private ArrayList<Integer> orders;
 	private ArrayList<Integer> movieQ;
+	private int id;
+	private ArrayList<Integer> movieQueue;
+	private String accountType;
+	private String accountCreationDate;
+	private ArrayList<String> rentalHistory;
+	
+	
+public Customer(){
+		
+		super();
+		
+	}
+
+	public int getId(){
+		return id;
+	}
+	
+	public void setId(int id){
+		this.id = id;
+	}
 	
 	/**
 	 * @return the firstName
@@ -292,17 +312,9 @@ public class Customer implements Serializable {
 	}
 
 
-	private ArrayList<Integer> movieQueue;
-	private String accountType;
-	private String accountCreationDate;
-	private ArrayList<String> rentalHistory;
 	
 	
-	public Customer(){
-		
-		super();
-		
-	}
+	
 
 
 	

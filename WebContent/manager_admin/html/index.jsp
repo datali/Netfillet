@@ -47,49 +47,49 @@
                 </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
-                        <a href="index.jsp" class="active" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Welcome</a>
+                        <a href="/FinalProject305/manager_admin/html/index.jsp" class="active" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Welcome</a>
                     </li>
                     <li>
-                        <a href="add_movie.html" class="waves-effect"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>Add Movie</a>
+                        <a href="/FinalProject305/manager_admin/html/add_movie.jsp" class="waves-effect"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>Add Movie</a>
                     </li>
                     <li>
-                        <a href="edit_movie.html" class="waves-effect"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit Movie</a>
+                        <a href="/FinalProject305/manager_admin/html/edit_movie.jsp" class="waves-effect"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit Movie</a>
                     </li>
                     <li>
-                        <a href="remove_movie.html" class="waves-effect"><i class="fa fa-minus-circle fa-fw" aria-hidden="true"></i>Remove Movie</a>
+                        <a href="/FinalProject305/manager_admin/html/remove_movie.jsp" class="waves-effect"><i class="fa fa-minus-circle fa-fw" aria-hidden="true"></i>Remove Movie</a>
                     </li>
                     <li>
-                        <a href="add_employee.html" class="waves-effect"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>Add Employee</a>
+                        <a href="/FinalProject305/manager_admin/html/add_employee.jsp" class="waves-effect"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>Add Employee</a>
                     </li>
                     <li>
-                        <a href="edit_employee.html" class="waves-effect"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit Employee</a>
+                        <a href="/FinalProject305/manager_admin/html/edit_employee.jsp" class="waves-effect"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit Employee</a>
                     </li>
                     <li>
-                        <a href="remove_employee.html" class="waves-effect"><i class="fa fa-minus-circle fa-fw" aria-hidden="true"></i>Remove Employee</a>
+                        <a href="/FinalProject305/manager_admin/html/remove_employee.jsp" class="waves-effect"><i class="fa fa-minus-circle fa-fw" aria-hidden="true"></i>Remove Employee</a>
                     </li>
                     <li>
-                        <a href="obtain_sales_report.html" class="waves-effect"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i>Create Sales Report</a>
+                        <a href="/FinalProject305/manager_admin/html/obtain_sales_report.jsp" class="waves-effect"><i class="fa fa-file-text fa-fw" aria-hidden="true"></i>Create Sales Report</a>
                     </li>
                     <li>
-                        <a href="create_all_movies_comprehensive_list.html" class="waves-effect"><i class="fa fa-database fa-fw" aria-hidden="true"></i>Comprehensive Movie List</a>
+                        <a href="/FinalProject305/manager_admin/html/create_all_movies_comprehensive_list.jsp" class="waves-effect"><i class="fa fa-database fa-fw" aria-hidden="true"></i>Comprehensive Movie List</a>
                     </li>
                     <li>
-                        <a href="create_all_movies_list_by_movie_name.html" class="waves-effect"><i class="fa fa-sort-alpha-asc fa-fw" aria-hidden="true"></i>Movie List by Name</a>
+                        <a href="/FinalProject305/manager_admin/html/create_all_movies_list_by_movie_name.jsp" class="waves-effect"><i class="fa fa-sort-alpha-asc fa-fw" aria-hidden="true"></i>Movie List by Name</a>
                     </li>
                     <li>
-                        <a href="create_all_movies_list_by_movie_type.html" class="waves-effect"><i class="fa fa-sitemap fa-fw" aria-hidden="true"></i>Movie List by Type</a>
+                        <a href="/FinalProject305/manager_admin/html/create_all_movies_list_by_movie_type.jsp" class="waves-effect"><i class="fa fa-sitemap fa-fw" aria-hidden="true"></i>Movie List by Type</a>
                     </li>
                     <li>
-                        <a href="create_all_movies_list_by_customer_name.html" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Movie List by Customer Name</a>
+                        <a href="/FinalProject305/manager_admin/html/create_all_movies_list_by_customer_name.jsp" class="waves-effect"><i class="fa fa-users fa-fw" aria-hidden="true"></i>Movie List by Customer Name</a>
                     </li>
                     <li>
-                        <a href="most_oversaw_transaction_employee.html" class="waves-effect"><i class="fa fa-star fa-fw" aria-hidden="true"></i>Most Transaction Oversawed Customer Representative</a>
+                        <a href="/FinalProject305/manager_admin/html/most_oversaw_transaction_employee.jsp" class="waves-effect"><i class="fa fa-star fa-fw" aria-hidden="true"></i>Most Transaction Oversawed Customer Representative</a>
                     </li>
                     <li>
-                        <a href="most_active_customer_list.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Most Active Customers</a>
+                        <a href="/FinalProject305/manager_admin/html/most_active_customer_list.jsp" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Most Active Customers</a>
                     </li>
                      <li>
-                        <a href="most_rented_movie_list.html" class="waves-effect"><i class="fa fa-line-chart fa-fw" aria-hidden="true"></i>Most Rented Movies</a>
+                        <a href="/FinalProject305/manager_admin/html/most_rented_movie_list.jsp" class="waves-effect"><i class="fa fa-line-chart fa-fw" aria-hidden="true"></i>Most Rented Movies</a>
                     </li>
                     
                 </ul>

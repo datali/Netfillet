@@ -23,6 +23,10 @@ public class CustomerData {
 	      return conn;
 	}
 	
+	public static int id(int customerId){
+		return customerId;
+	}
+	
 	
 	public static  String email(int customerId)
 	  {
@@ -102,7 +106,7 @@ public class CustomerData {
 		String firstName = "";
 	    try
 	    {
-	      String query = "SELECT * FROM Person WHERE Id = '"+customerId+"' ";
+	      String query = "SELECT * FROM Person WHERE SSN = '"+customerId+"' ";
 	      Statement st = createConnection().createStatement();
 	      ResultSet rs = st.executeQuery(query);
 	      while (rs.next())
@@ -125,7 +129,7 @@ public class CustomerData {
 			String lastName = "";
 		    try
 		    {
-		      String query = "SELECT * FROM Person WHERE Id = '"+customerId+"' ";
+		      String query = "SELECT * FROM Person WHERE SSN = '"+customerId+"' ";
 		      Statement st = createConnection().createStatement();
 		      ResultSet rs = st.executeQuery(query);
 		      while (rs.next())
@@ -148,7 +152,7 @@ public class CustomerData {
 			String address = "";
 		    try
 		    {
-		      String query = "SELECT * FROM Person WHERE Id = '"+customerId+"' ";
+		      String query = "SELECT * FROM Person WHERE SSN = '"+customerId+"' ";
 		      Statement st = createConnection().createStatement();
 		      ResultSet rs = st.executeQuery(query);
 		      while (rs.next())
@@ -171,7 +175,7 @@ public class CustomerData {
 		int zipcode = 0;
 	    try
 	    {
-	      String query = "SELECT * FROM Person WHERE Id = '"+customerId+"' ";
+	      String query = "SELECT * FROM Person WHERE SSN = '"+customerId+"' ";
 	      Statement st = createConnection().createStatement();
 	      ResultSet rs = st.executeQuery(query);
 	      while (rs.next())
@@ -194,7 +198,7 @@ public class CustomerData {
 			String telephone = "";
 		    try
 		    {
-		      String query = "SELECT * FROM Person WHERE Id = '"+customerId+"' ";
+		      String query = "SELECT * FROM Person WHERE SSN = '"+customerId+"' ";
 		      Statement st = createConnection().createStatement();
 		      ResultSet rs = st.executeQuery(query);
 		      while (rs.next())
@@ -566,7 +570,153 @@ public static void EditSSN(int Id, int SSN){
 
 }
 
+public static void EditRating(int Id, int rating){
+
+	try
+	{
+
+		String query = "UPDATE Customer SET Rating = '"+rating+"' WHERE CustomerId = '"+Id+"'";
+		Statement st = createConnection().createStatement();
+		st.executeUpdate(query);
+
+		st.close();
+	}
+	catch (Exception e)
+	{
+		System.err.println("Got an exception! ");
+		System.err.println(e.getMessage());
+	}
+
+
+}
+
+public static void EditCreditCardNum(int Id, String creditCardNum){
+
+	try
+	{
+
+		String query = "UPDATE Customer SET CreditCardNumber = '"+creditCardNum+"' WHERE CustomerId = '"+Id+"'";
+		Statement st = createConnection().createStatement();
+		st.executeUpdate(query);
+
+		st.close();
+	}
+	catch (Exception e)
+	{
+		System.err.println("Got an exception! ");
+		System.err.println(e.getMessage());
+	}
+
+
+}
+
+public static void EditEmail(int Id, String email){
+
+	try
+	{
+
+		String query = "UPDATE Customer SET Email = '"+email+"' WHERE CustomerId = '"+Id+"'";
+		Statement st = createConnection().createStatement();
+		st.executeUpdate(query);
+
+		st.close();
+	}
+	catch (Exception e)
+	{
+		System.err.println("Got an exception! ");
+		System.err.println(e.getMessage());
+	}
+
+
+}
+
+public static void EditCity(int Id, String City){
+
+	try
+	{
+
+		int zipCode = zipcode(Id);
+		String query = "UPDATE Location SET City = '"+City+"' WHERE ZipCode = '"+zipCode+"'";
+		Statement st = createConnection().createStatement();
+		st.executeUpdate(query);
+
+		st.close();
+	}
+	catch (Exception e)
+	{
+		System.err.println("Got an exception! ");
+		System.err.println(e.getMessage());
+	}
+
+
+}
+
+public static void EditState(int Id, String State){
+
+	try
+	{
+
+		int zipCode = zipcode(Id);
+		String query = "UPDATE Location SET State = '"+State+"' WHERE ZipCode = '"+zipCode+"'";
+		Statement st = createConnection().createStatement();
+		st.executeUpdate(query);
+
+		st.close();
+	}
+	catch (Exception e)
+	{
+		System.err.println("Got an exception! ");
+		System.err.println(e.getMessage());
+	}
+
+
+}
+
+public static ArrayList<ArrayList> createMailingList(){
+
+	ArrayList<ArrayList> rs_array = new ArrayList<ArrayList>();
+	try
+	{
+
+		
+		String query = "SELECT  P.SSN, P.FirstName, P.LastName, P.Address, C.Email" + " FROM Customer C, Person P " + "WHERE C.CustomerId = P.SSN ";
+		Statement st = createConnection().createStatement();
+		//st.executeUpdate(query);
+		st.executeQuery(query);
+		
+		 ResultSet rs = st.executeQuery(query);
+		 System.out.println(rs.toString());
+		 ArrayList<String> stringArray = new ArrayList<String>();
+		 
+	      while (rs.next())
+	      {
+	    	  stringArray.add(String.valueOf(rs.getInt("SSN")));
+	    	  stringArray.add(rs.getString("FirstName"));
+	    	  stringArray.add(rs.getString("LastName"));
+	    	  stringArray.add(rs.getString("Address"));
+	    	  stringArray.add(rs.getString("Email"));
+	    	  
+	    	  rs_array.add(stringArray);
+	        }
+	      st.close();
+	      return rs_array;
+	      
+	    }
+
+		//st.close();
+	
+	catch (Exception e)
+	{
+		System.err.println("Got an exception! ");
+		System.err.println(e.getMessage());
+	}
+	
+	return rs_array;
 	
 }
+}
+
+	
+
 
 
