@@ -12,11 +12,9 @@
     <!-- Menu CSS -->
     <link href="<c:url value="/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" />" rel="stylesheet">
     <!-- toast CSS -->
-    <link href="<c:url value="/plugins/bower_components/toast-master/css/jquery.toast.css" />" rel="stylesheet">
-    
+    <link href="<c:url value="/plugins/bower_components/toast-master/css/jquery.toast.css" />" rel="stylesheet">   
     <!-- morris CSS -->
     <link href="<c:url value="/plugins/bower_components/morrisjs/morris.css" />" rel="stylesheet">
-        
     <!-- chartist CSS -->
     <link href="<c:url value="/plugins/bower_components/chartist-js/dist/chartist.min.css" />" rel="stylesheet">
     <link href="<c:url value="/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" />" rel="stylesheet">
@@ -25,9 +23,7 @@
     <!-- Custom CSS -->
     <link href="<c:url value="/css/yan.css" />" rel="stylesheet">
     <!-- color CSS -->
-    <link href="<c:url value="/css/default.css" />" rel="stylesheet">
-    
-    
+    <link href="<c:url value="/css/default.css" />" rel="stylesheet">  
 <![endif]-->
 </head>
 
@@ -41,31 +37,34 @@
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
         <div class="navbar-default sidebar" role="navigation">
-           <div class="sidebar-nav slimscrollsidebar">
+            <div class="sidebar-nav slimscrollsidebar">
                 <div class="sidebar-head">
-                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Admin</span></h3>
+                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">My Account</span></h3>
                 </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
-                        <a href="/FinalProject305/employee_admin/html/index.jsp" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Welcome</a>
+                        <a href="/FinalProject305/customer_admin/index.jsp"  class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Welcome</a>
                     </li>
                     <li>
-                        <a href="/FinalProject305/employee_admin/html/record_an_order.jsp" class="waves-effect"><i class="fa fa-circle-thin fa-fw" aria-hidden="true"></i>Record an order</a>
+                        <a href="/FinalProject305/customer_admin/myqueue.jsp" class="waves-effect"><i class="fa fa-spinner fa-fw" aria-hidden="true"></i>My Movie Queue</a>
                     </li>
                     <li>
-                        <a href="/FinalProject305/employee_admin/html/add_customer.jsp" class="waves-effect"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>Add customer</a>
+                        <a href="/FinalProject305/customer_admin/mymovies.jsp" class="waves-effect"><i class="fa fa-folder-o fa-fw" aria-hidden="true"></i>My Movies</a>
                     </li>
                     <li>
-                        <a href="/FinalProject305/employee_admin/html/edit_customer.jsp" class="waves-effect"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit customer</a>
+                        <a href="/FinalProject305/customer_admin/myhistory.jsp" class="waves-effect"><i class="fa fa-history fa-fw" aria-hidden="true"></i>My Order History</a>
                     </li>
                     <li>
-                        <a href="/FinalProject305/employee_admin/html/remove_customer.jsp" class="active" class="waves-effect"><i class="fa fa-minus-circle fa-fw" aria-hidden="true"></i>Remove customer</a>
+                        <a href="/FinalProject305/customer_admin/movie_search_type.jsp" class="waves-effect"><i class="fa fa-search fa-fw" aria-hidden="true"></i>Search Movie by Genres</a>
                     </li>
                     <li>
-                        <a href="/FinalProject305/employee_admin/html/create_customer_mailinglist.jsp" class="waves-effect"><i class="fa fa-list fa-fw" aria-hidden="true"></i>Create customer list</a>
+                        <a href="/FinalProject305/customer_admin/movie_search_keyword.jsp" class="waves-effect"><i class="fa fa-language fa-fw" aria-hidden="true"></i>Search Movie by Keyword</a>
                     </li>
                     <li>
-                        <a href="/FinalProject305/employee_admin/html/create_movie_suggestion_list.jsp" class="waves-effect"><i class="fa fa-list fa-fw" aria-hidden="true"></i>Create movie suggestion</a>
+                        <a href="/FinalProject305/customer_admin/movie_search_actor.jsp" class="waves-effect"><i class="fa fa-male fa-fw" aria-hidden="true"></i>Search Movie by Actor</a>
+                    </li>
+					<li>
+                        <a href="/FinalProject305/customer_admin/best_sellers.jsp" class="active" class="waves-effect"><i class="fa fa-fire fa-fw" aria-hidden="true"></i>Best Sellers</a>
                     </li>
 
                 </ul>
@@ -80,24 +79,17 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Remove Customer</h4> </div>
+                        <h4 class="page-title">Trending</h4> </div>
                 </div>
                 <!-- /.row -->
                 <!-- .row -->
-                <div class="row">
+                <div class="row">               
                     <div class="col-md-8 col-xs-12">
                         <div class="white-box">
-                            <form action="/FinalProject305/EmployeeRemoveCustServlet" role="form" class="form-horizontal form-material" method="POST">
-                                <div class="form-group">
-                                    <label class="col-md-12">Customer ID</label>
-                                    <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-line" name="customerID"></div>
-                                </div>
-                             	<div class="form-group">
-                                    <div class="col-sm-12">
-                                        <input type="submit" value="Delete Customer" class="btn">
-                                    </div>
-                                </div>
+                            <form action="/FinalProject305/CustomerBestSellersServlet" role="form" class="form-horizontal form-material" method="POST">
+                                
+                                // content
+                                                     
                             </form>
                         </div>
                     </div>

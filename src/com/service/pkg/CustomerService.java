@@ -111,7 +111,7 @@ public CustomerService(){
 		CustomerData.DeleteCustomer(Id);
 	}
 	
-	public static void AddCustomer(int SSN, String Email, int Rating, String CreditCardNumber, String FirstName, String LastName, String Address, String City, String State, int ZipCode, String Telephone){
+	public void AddCustomer(int SSN, String Email, int Rating, String CreditCardNumber, String FirstName, String LastName, String Address, String City, String State, int ZipCode, String Telephone){
 		CustomerData.AddCustomer(SSN, Email, Rating, CreditCardNumber, FirstName, LastName, Address,City, State, ZipCode, Telephone);
 		
 	}
@@ -157,6 +157,12 @@ public CustomerService(){
 	
 	public void EditState(int Id, String State){
 		CustomerData.EditState(Id, State);
+		
+	}
+	
+	public ArrayList<Integer> getMovieQ(int id){
+		
+		return CustomerData.movieQ(id);
 		
 	}
 	

@@ -47,25 +47,25 @@
                 </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
-                        <a href="index.jsp" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Welcome</a>
+                        <a href="/FinalProject305/employee_admin/html/index.jsp" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Welcome</a>
                     </li>
                     <li>
-                        <a href="employee_admin/html/record_an_order.jsp" class="waves-effect"><i class="fa fa-circle-thin fa-fw" aria-hidden="true"></i>Record an order</a>
+                        <a href="/FinalProject305/employee_admin/html/record_an_order.jsp" class="waves-effect"><i class="fa fa-circle-thin fa-fw" aria-hidden="true"></i>Record an order</a>
                     </li>
                     <li>
-                        <a href="employee_admin/html/add_customer.jsp" class="waves-effect"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>Add customer</a>
+                        <a href="/FinalProject305/employee_admin/html/add_customer.jsp" class="waves-effect"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>Add customer</a>
                     </li>
                     <li>
-                        <a href="employee_admin/html/edit_customer.jsp" class="waves-effect"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit customer</a>
+                        <a href="/FinalProject305/employee_admin/html/edit_customer.jsp" class="waves-effect"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit customer</a>
                     </li>
                     <li>
-                        <a href="employee_admin/html/remove_customer.jsp" class="waves-effect"><i class="fa fa-minus-circle fa-fw" aria-hidden="true"></i>Remove customer</a>
+                        <a href="/FinalProject305/employee_admin/html/remove_customer.jsp" class="waves-effect"><i class="fa fa-minus-circle fa-fw" aria-hidden="true"></i>Remove customer</a>
                     </li>
                     <li>
-                        <a href="employee_admin/html/create_customer_mailinglist.jsp" class="active" class="waves-effect"><i class="fa fa-list fa-fw" aria-hidden="true"></i>Create customer list</a>
+                        <a href="/FinalProject305/employee_admin/html/create_customer_mailinglist.jsp" class="active" class="waves-effect"><i class="fa fa-list fa-fw" aria-hidden="true"></i>Create customer list</a>
                     </li>
                     <li>
-                        <a href="employee_admin/html/create_movie_suggestion_list.jsp" class="waves-effect"><i class="fa fa-list fa-fw" aria-hidden="true"></i>Create movie suggestion</a>
+                        <a href="/FinalProject305/employee_admin/html/create_movie_suggestion_list.jsp" class="waves-effect"><i class="fa fa-list fa-fw" aria-hidden="true"></i>Create movie suggestion</a>
                     </li>
 
                 </ul>
@@ -87,9 +87,10 @@
     				<c:forEach items="${element}" var = "item">
     					
     					<c:out  value = "${item}" />
-    					<br>
+    					
     					
     				</c:forEach>
+    				<br>
     			</c:forEach>
                 </div>
                 <!-- /.row -->

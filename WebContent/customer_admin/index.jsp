@@ -12,11 +12,9 @@
     <!-- Menu CSS -->
     <link href="<c:url value="/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" />" rel="stylesheet">
     <!-- toast CSS -->
-    <link href="<c:url value="/plugins/bower_components/toast-master/css/jquery.toast.css" />" rel="stylesheet">
-    
+    <link href="<c:url value="/plugins/bower_components/toast-master/css/jquery.toast.css" />" rel="stylesheet">   
     <!-- morris CSS -->
     <link href="<c:url value="/plugins/bower_components/morrisjs/morris.css" />" rel="stylesheet">
-        
     <!-- chartist CSS -->
     <link href="<c:url value="/plugins/bower_components/chartist-js/dist/chartist.min.css" />" rel="stylesheet">
     <link href="<c:url value="/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" />" rel="stylesheet">
@@ -25,9 +23,7 @@
     <!-- Custom CSS -->
     <link href="<c:url value="/css/yan.css" />" rel="stylesheet">
     <!-- color CSS -->
-    <link href="<c:url value="/css/default.css" />" rel="stylesheet">
-    
-    
+    <link href="<c:url value="/css/default.css" />" rel="stylesheet">  
 <![endif]-->
 </head>
 
@@ -43,30 +39,34 @@
         <div class="navbar-default sidebar" role="navigation">
             <div class="sidebar-nav slimscrollsidebar">
                 <div class="sidebar-head">
-                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">Admin</span></h3>
+                    <h3><span class="fa-fw open-close"><i class="ti-close ti-menu"></i></span> <span class="hide-menu">My Account</span></h3>
                 </div>
                 <ul class="nav" id="side-menu">
                     <li style="padding: 70px 0 0;">
-                        <a href="/FinalProject305/employee_admin/html/index.jsp" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Welcome</a>
+                        <a href="/FinalProject305/customer_admin/index.jsp" class="active" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i>Welcome</a>
                     </li>
                     <li>
-                        <a href="/FinalProject305/employee_admin/html/record_an_order.jsp" class="waves-effect"><i class="fa fa-circle-thin fa-fw" aria-hidden="true"></i>Record an order</a>
+                        <a href="/FinalProject305/customer_admin/myqueue.jsp" class="waves-effect"><i class="fa fa-spinner fa-fw" aria-hidden="true"></i>My Movie Queue</a>
                     </li>
                     <li>
-                        <a href="/FinalProject305/employee_admin/html/add_customer.jsp" class="active" class="waves-effect"><i class="fa fa-plus-circle fa-fw" aria-hidden="true"></i>Add customer</a>
+                        <a href="/FinalProject305/customer_admin/mymovies.jsp" class="waves-effect"><i class="fa fa-folder-o fa-fw" aria-hidden="true"></i>My Movies</a>
                     </li>
                     <li>
-                        <a href="/FinalProject305/employee_admin/html/CustomerEditValidation.jsp" class="waves-effect"><i class="fa fa-pencil-square-o fa-fw" aria-hidden="true"></i>Edit customer</a>
+                        <a href="/FinalProject305/customer_admin/myhistory.jsp" class="waves-effect"><i class="fa fa-history fa-fw" aria-hidden="true"></i>My Order History</a>
                     </li>
                     <li>
-                        <a href="/FinalProject305/employee_admin/html/remove_customer.jsp" class="waves-effect"><i class="fa fa-minus-circle fa-fw" aria-hidden="true"></i>Remove customer</a>
+                        <a href="/FinalProject305/customer_admin/movie_search_type.jsp" class="waves-effect"><i class="fa fa-search fa-fw" aria-hidden="true"></i>Search Movie by Genres</a>
                     </li>
                     <li>
-                        <a href="/FinalProject305/employee_admin/html/create_customer_mailinglist.jsp" class="waves-effect"><i class="fa fa-list fa-fw" aria-hidden="true"></i>Create customer list</a>
+                        <a href="/FinalProject305/customer_admin/movie_search_keyword.jsp" class="waves-effect"><i class="fa fa-language fa-fw" aria-hidden="true"></i>Search Movie by Keyword</a>
                     </li>
                     <li>
-                        <a href="/FinalProject305/employee_admin/html/create_movie_suggestion_list.jsp" class="waves-effect"><i class="fa fa-list fa-fw" aria-hidden="true"></i>Create movie suggestion</a>
+                        <a href="/FinalProject305/customer_admin/movie_search_actor.jsp" class="waves-effect"><i class="fa fa-male fa-fw" aria-hidden="true"></i>Search Movie by Actor</a>
                     </li>
+					<li>
+                        <a href="/FinalProject305/customer_admin/best_sellers.jsp" class="waves-effect"><i class="fa fa-fire fa-fw" aria-hidden="true"></i>Best Sellers</a>
+                    </li>
+                    
 
                 </ul>
             </div>
@@ -80,76 +80,77 @@
             <div class="container-fluid">
                 <div class="row bg-title">
                     <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                        <h4 class="page-title">Add customer</h4> </div>
+                        <h4 class="page-title">Account Information</h4> </div>
                 </div>
                 <!-- /.row -->
                 <!-- .row -->
                 <div class="row">
+                    <div class="col-md-4 col-xs-12">
+                        <div class="white-box">
+                            <div class="user-bg"> 
+                                <div class="overlay-box">
+                                    <div class="user-content">
+                                        <a href="javascript:void(0)"><img src="${pageContext.request.contextPath}/plugins/images/users/user_icon.png" class="thumb-lg img-circle" alt="img"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-md-8 col-xs-12">
                         <div class="white-box">
-                            <form action="/FinalProject305/EmployeeAddCustServlet" role="form" class="form-horizontal form-material" method="POST">
+                            <form action="/FinalProject305/CustomerAdminServlet" role="form" class="form-horizontal form-material" method="POST">
                                 <div class="form-group">
-                                    <label class="col-md-12">Customer ID</label>
+                                    <label class="col-md-12">Account ID</label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-line" name="customerID"> </div>
+                                        <label id="id" class="form-control form-control-line information" >${sessionScope.Customer.accountId}</label></div>
                                 </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Full Name</label>
+                                    <div class="col-md-12">
+                                        <label id="fullname" class="form-control form-control-line information" >${sessionScope.Customer.firstName} ${sessionScope.Customer.lastName}</label></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Account Open Date</label>
+                                    <div class="col-md-12">
+                                        <label id="opendate" class="form-control form-control-line information" >${sessionScope.Customer.accountCreationDate}</label></div>
+                                        
+                                </div> 
                                 <div class="form-group">
                                     <label class="col-md-12">Email</label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-line" name="email"> </div>
+                                        <label id="email" class="form-control form-control-line information" >${sessionScope.Customer.email}</label></div>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-12">Rating</label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-line" name="rating"> </div>
-                                </div>
+                                        <label id="rating" class="form-control form-control-line information" >${sessionScope.Customer.rating}</label></div>
+                                </div>      
                                 <div class="form-group">
                                     <label class="col-md-12">Credit Card Number</label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-line" name="creditCardNumber"> </div>
-                                </div>
-              
+                                        <label id="creditcard" class="form-control form-control-line information" >${sessionScope.Customer.creditCardNum}</label></div>
+                                </div>   
                                 <div class="form-group">
-                                    <label class="col-md-12">First Name</label>
+                                    <label class="col-md-12">Street Address</label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-line" name="firstname"> </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Last Name</label>
-                                    <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-line" name="lastname"> </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Address</label>
-                                    <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-line" name="address"> </div>
-                                </div>
+                                        <label id="address" class="form-control form-control-line information" >${sessionScope.Customer.address}</label></div>
+                                </div> 
                                 <div class="form-group">
                                     <label class="col-md-12">City</label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-line" name="city"> </div>
-                                </div>
+                                        <label id="city" class="form-control form-control-line information" >${sessionScope.Customer.city}</label></div>
+                                </div>  
                                 <div class="form-group">
-                                    <label class="col-md-12">State</label>
+                                    <label class="col-md-12">Zipcode</label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-line" name="state"> </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-12">Zip Code</label>
-                                    <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-line" name="zipcode"> </div>
-                                </div>
+                                        <label id="zipcode" class="form-control form-control-line information" >${sessionScope.Customer.zipCode}</label></div>
+                                </div>  
                                 <div class="form-group">
                                     <label class="col-md-12">Phone Number</label>
                                     <div class="col-md-12">
-                                        <input type="text" class="form-control form-control-line" name="phonenum"> </div>
+                                        <label id="phone num" class="form-control form-control-line information" >${sessionScope.Customer.phoneNumber}</label></div>
                                 </div>
-                                
-                             	<div class="form-group">
-                                    <div class="col-sm-12">
-                                        <input type="submit" value="Add Customer" class="btn btn-success">
-                                    </div>
-                                </div>
+                                              
                             </form>
                         </div>
                     </div>

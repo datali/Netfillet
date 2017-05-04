@@ -6,9 +6,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE html>
 <html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
-<title>Cinema A Entertainment Category Flat Bootstarp Resposive
-	Website Template | Home :: w3layouts</title>
+<title>NetFillet</title>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href="css/carousel.css" rel='stylesheet' type='text/css' />
 <!-- Custom Theme files -->
@@ -53,8 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header">
 				<div class="top-header">
 					<div class="logo">
-						<a href="index.html"><img src="images/logo.png" alt="" /></a>
-						<p>Movie Theater</p>
+						<a href="welcome.jsp"><img src="images/netfillet.png" alt="" /></a>
 					</div>
 					<div class="search">
 						<form>
@@ -66,44 +65,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="clearfix"></div>
 				</div>
 				<div class="header-info">
-					<h1>BIG HERO 6</h1>
+					<h1>IRONMAN 3</h1>
 					<p class="age">
-						<a href="#">All Age</a> Don Hall, Chris Williams
+						<a href="#">All Age</a> Shane Black, Robert Downy Jr
 					</p>
 					<p class="review">Rating
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp; 8,5/10</p>
-					<p class="review reviewgo">Genre
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp; Animation,
-						Action, Comedy</p>
-					<p class="review">Release &nbsp;&nbsp;&nbsp;&nbsp;:
-						&nbsp;&nbsp; 7 November 2014</p>
-					<p class="special">The special bond that develops between
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp;&nbsp; 4/5</p>
+					<p class="review">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Genre
+						 Action, Adventure, Sci-Fi </p>
+					
+					<!-- <p class="special">The special bond that develops between
 						plus-sized inflatable robot Baymax, and prodigy Hiro Hamada, who
 						team up with a group of friends to form a band of high-tech
-						heroes.</p>
-					<a class="video" href="#"><i class="video1"></i>WATCH TRAILER</a> <a
-						class="book" href="#"><i class="book1"></i>BOOK TICKET</a>
+						heroes.</p> -->
+					<button type="button" class="btn-lg rent-btn">Rent Movie</button>
+					<button type="button" class="btn-lg queue-btn">Add to queue</button>
+					<!-- <a class="book" href="#"><i class="book1"></i>BOOK TICKET</a> -->
 				</div>
 			</div>
+			
 			<div class="review-slider">
 				<h3>User Movie queue</h3>
 				<ul id="flexiselDemo1">
-					<li><img src="images/r1.jpg" alt="" /></li>
-					<li><img src="images/r2.jpg" alt="" /></li>
-					<li><img src="images/r3.jpg" alt="" /></li>
-					<li><img src="images/r4.jpg" alt="" /></li>
-					<li><img src="images/r5.jpg" alt="" /></li>
-					<li><img src="images/r6.jpg" alt="" /></li>
+					<c:forEach items="${movieList}" var="movie" varStatus="loop">
+						<li><div class="tile" onclick="location.href='single.jsp?index=${loop.index}'">
+							<div class="tile__media">
+								<img class="tile__img" src="${movie.src}" alt="" />
+							</div>
+							<div class="tile__details">
+								<div class="tile__title">${movie.name}</div>
+							</div>
+						</div></li>
+					</c:forEach>
 				</ul>
 				<script type="text/javascript">
 					$(window).load(function() {
 
 						$("#flexiselDemo1").flexisel({
-							visibleItems : 6,
+							visibleItems : 4,
 							animationSpeed : 1000,
 							autoPlay : true,
 							autoPlaySpeed : 3000,
-							pauseOnHover : false,
+							pauseOnHover : true,
 							enableResponsiveBreakpoints : true,
 							responsiveBreakpoints : {
 								portrait : {
@@ -124,6 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</script>
 				<script type="text/javascript" src="js/jquery.flexisel.js"></script>
 			</div>
+			
 			<!--//pop-up-box -->
 			<br>
 			<br>
@@ -145,7 +149,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="tile">
 							<div class="tile__media">
 								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-2.jpg"
+									src="images/poster_default.gif"
 									alt="" />
 							</div>
 							<div class="tile__details">
@@ -156,7 +160,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="tile">
 							<div class="tile__media">
 								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-3.jpg"
+									src="images/r5.jpg"
 									alt="" />
 							</div>
 							<div class="tile__details">
@@ -167,7 +171,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="tile">
 							<div class="tile__media">
 								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-4.jpg"
+									src="images/poster_default.gif"
 									alt="" />
 							</div>
 							<div class="tile__details">
@@ -347,106 +351,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<h3>Popular Movies</h3>
 				<div class="row">
 					<div class="row__inner">
-
-						<div class="tile">
+						<c:forEach items="${movieList}" var="movie">
+    						<div class="tile" onclick="location.href='single.jsp'">
 							<div class="tile__media">
-								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-2.jpg"
-									alt="" />
+								<img class="tile__img" src="${movie.src}" alt="" />
 							</div>
 							<div class="tile__details">
-								<div class="tile__title">Top Gear</div>
+								<div class="tile__title">${movie.name}</div>
 							</div>
 						</div>
-
-						<div class="tile">
-							<div class="tile__media">
-								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-5.jpg"
-									alt="" />
-							</div>
-							<div class="tile__details">
-								<div class="tile__title">Top Gear</div>
-							</div>
-						</div>
-
-						<div class="tile">
-							<div class="tile__media">
-								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-8.jpg"
-									alt="" />
-							</div>
-							<div class="tile__details">
-								<div class="tile__title">Top Gear</div>
-							</div>
-						</div>
-
-						<div class="tile">
-							<div class="tile__media">
-								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-9.jpg"
-									alt="" />
-							</div>
-							<div class="tile__details">
-								<div class="tile__title">Top Gear</div>
-							</div>
-						</div>
-
-						<div class="tile">
-							<div class="tile__media">
-								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-10.jpg"
-									alt="" />
-							</div>
-							<div class="tile__details">
-								<div class="tile__title">Top Gear</div>
-							</div>
-						</div>
-
-						<div class="tile">
-							<div class="tile__media">
-								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-11.jpg"
-									alt="" />
-							</div>
-							<div class="tile__details">
-								<div class="tile__title">Top Gear</div>
-							</div>
-						</div>
-
-						<div class="tile">
-							<div class="tile__media">
-								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-12.jpg"
-									alt="" />
-							</div>
-							<div class="tile__details">
-								<div class="tile__title">Top Gear</div>
-							</div>
-						</div>
-
-						<div class="tile">
-							<div class="tile__media">
-								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-13.jpg"
-									alt="" />
-							</div>
-							<div class="tile__details">
-								<div class="tile__title">Top Gear</div>
-							</div>
-						</div>
-
-						<div class="tile">
-							<div class="tile__media">
-								<img class="tile__img"
-									src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/70390/show-14.jpg"
-									alt="" />
-							</div>
-							<div class="tile__details">
-								<div class="tile__title">Top Gear</div>
-							</div>
-						</div>
-
+						</c:forEach>
+						
 					</div>
 				</div>
 

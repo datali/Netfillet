@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpSession;
 
 import com.entity.pkg.Customer;
 import com.entity.pkg.Employee;
+import com.entity.pkg.Movie;
 import com.service.pkg.CustomerService;
 import com.service.pkg.EmployeeService;
 import com.service.pkg.MovieService;
@@ -60,7 +62,17 @@ public class LoginServlet extends HttpServlet {
 		    	Customer customer = service.createUser();
 		    	HttpSession session = request.getSession();
 		    	session.setAttribute("Customer", customer);
-		        RequestDispatcher rd=request.getRequestDispatcher("/videos.jsp");  
+		    	ArrayList<Integer> movie_array = new ArrayList<Integer>();
+		    	movie_array = service.getMovieQ(customer.getId());
+				ArrayList<Movie> movie_list = new ArrayList<Movie>();
+				for(int id: movie_array){
+					MovieService mservice  = new MovieService();
+					Movie movie = mservice.createMovie(id);
+					movie_list.add(movie);
+					
+				}
+				session.setAttribute("movieList", movie_list);
+		        RequestDispatcher rd=request.getRequestDispatcher("welcome.jsp");  
 		        rd.forward(request,response); 
 		    }  
 		    else{  

@@ -400,7 +400,7 @@ public static void AddCustomer(int SSN, String Email, int Rating, String CreditC
 	 Statement st = createConnection().createStatement();
 	 
 	 String locationQuery = "INSERT INTO Location (ZipCode, City, State)" +
-    		 "VALUES ('"+ZipCode+"','"+City+"','"+State+"')";
+    		 "VALUES ('"+ZipCode+"','"+City+"','"+State+"')" + "ON DUPLICATE KEY UPDATE ZipCode ='"+ZipCode+"'";
    
 	 st.executeUpdate(locationQuery);
       
@@ -413,6 +413,8 @@ public static void AddCustomer(int SSN, String Email, int Rating, String CreditC
        		 "VALUES ('"+SSN+"','"+Email+"','"+Rating+"','"+CreditCardNumber+"')";
       
       st.executeUpdate(customerQuery);
+      
+      
       
       
       
@@ -686,10 +688,11 @@ public static ArrayList<ArrayList> createMailingList(){
 		
 		 ResultSet rs = st.executeQuery(query);
 		 System.out.println(rs.toString());
-		 ArrayList<String> stringArray = new ArrayList<String>();
+		 
 		 
 	      while (rs.next())
 	      {
+	    	  ArrayList<String> stringArray = new ArrayList<String>();
 	    	  stringArray.add(String.valueOf(rs.getInt("SSN")));
 	    	  stringArray.add(rs.getString("FirstName"));
 	    	  stringArray.add(rs.getString("LastName"));

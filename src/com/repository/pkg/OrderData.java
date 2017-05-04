@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 public class OrderData {
@@ -71,22 +72,35 @@ public class OrderData {
 	  }
 	
 	
-	public static void RecordOrder(java.sql.Date DateTime, java.sql.Date ReturnDate, int AccountId, int EmployeeId, int MovieId ){
+	public static void RecordOrder(String DateTime, String ReturnDate, int AccountId, int EmployeeId, int MovieId){
 		
 		try
 		{
-
-
+			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 			Statement st = createConnection().createStatement();
-			String orderQuery = "INSERT INTO Order (DateTime, ReturnDate)" +
-					"VALUES ('"+DateTime+"','"+ReturnDate+"')";
+			String getIndexQuery = "SELECT MAX(OrderId) AS OrderId FROM Orders";
+			ResultSet rs = st.executeQuery(getIndexQuery);
+			int OrderId = 0;
+			while (rs.next())
+		      {
+		        OrderId = rs.getInt("OrderId");
+		      }
+			
+			 String orderQuery = "INSERT INTO Orders (DateTime, ReturnDate, AccountId, MovieId)" +
+		    		  "VALUES ('"+DateTime+"','"+ReturnDate+"', '"+AccountId+"', '"+MovieId+"')";
 
-			st.executeUpdate(orderQuery);
+		      st.executeUpdate(orderQuery);
+			
+			
+		      String rentalQuery = "INSERT INTO Rental (AccountId, CustRepId, OrderId, MovieId)" +
+		    		  "VALUES ('"+AccountId+"','"+EmployeeId+"','"+(OrderId + 1)+"','"+MovieId+"')";
 
-//			String rentalQuery = "INSERT INTO Rental (AccountId, EmployeeId, OrderId, MovieId)" +
-//					"VALUES ('"+AccountId+"','"+EmployeeId+"','"+OrderId+"','"+MovieId+"')";
+		      st.executeUpdate(rentalQuery);
 
-			//st.executeUpdate(employeeQuery);
+			
+		     
+
+			
 
 			st.close();
 		}

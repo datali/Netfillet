@@ -1,5 +1,7 @@
 package com.entity.pkg;
 
+import java.util.ArrayList;
+
 public class Movie {
 	private int movieId;
 	private String name;
@@ -7,18 +9,41 @@ public class Movie {
 	private int Rating;
 	private double distrFee;
 	private int numCopies;
+	private String src;
+	private ArrayList<String> actors;
 	
 	
+	
+	
+	public ArrayList<String> getActor() {
+		return actors;
+	}
+
+	public void setActor(ArrayList<String> actor) {
+		this.actors = actor;
+	}
+
+	public String getSrc() {
+		return src;
+	}
+
+	public void setSrc(String src) {
+		this.src = src;
+	}
+
 	public Movie(int MovieId){
 		
 		this.movieId = MovieId;
+		src = "images/poster_default.gif";
 		
 	}
 	
 	public Movie(){
+		src = "images/poster_default.gif";
 		
 	}
 
+	
 
 	public int getMovieId() {
 		return movieId;

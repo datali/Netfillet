@@ -289,6 +289,32 @@ public static void EditDistrFee(int MovieId, double DistrFee){
     
 }
 
+public static ArrayList<Integer> Actors(){
+	
+	
+	
+	ArrayList<Integer> allMovies = new ArrayList<Integer>();
+	
+    try
+    {
+      String query = "SELECT * FROM Movie";
+      Statement st = createConnection().createStatement();
+      ResultSet rs = st.executeQuery(query);
+      while (rs.next())
+      {
+        allMovies.add(rs.getInt("MovieId"));
+        }
+      st.close();
+    }
+    catch (Exception e)
+    {
+      System.err.println("Got an exception! ");
+      System.err.println(e.getMessage());
+    }
+    
+    return allMovies;
+}
+
 public static void EditNumCopies(int MovieId, int NumCopies){
 	
 	try
