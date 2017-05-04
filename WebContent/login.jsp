@@ -20,7 +20,7 @@
       <section>      
         <h1 class="entry-title"><span>LogIn</span> </h1>
         <hr>
-            <form action="/FinalProject305/LoginServlet" class="form-horizontal" method="post" name="signup" id="signup" enctype="multipart/form-data" >        
+            <form action="/FinalProject305/LoginServlet" class="form-horizontal" method="post" enctype="multipart/form-data" >        
         
         <div class="form-group" style="padding-top: 100px">
           <label class="control-label col-sm-3">Account Id </label>

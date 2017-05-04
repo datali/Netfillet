@@ -32,8 +32,7 @@
 				</div>				
 
 				<form action="/FinalProject305/SignUpServlet"
-					class="form-horizontal" method="post" name="signup" id="signup"
-					enctype="multipart/form-data">
+					class="form-horizontal" method="post" >
 					<div class="form-group">
 						<label class="control-label col-sm-3">SSN<span
 							class="text-danger">*</span></label>
@@ -50,7 +49,7 @@
 								<span class="input-group-addon"><i
 									class="glyphicon glyphicon-envelope"></i></span> <input type="email"
 									class="form-control" name="email"
-									placeholder="Enter your Email" value="">
+									placeholder="Enter your Email">
 							</div>
 							
 						</div>
@@ -130,18 +129,14 @@
 
 					
 					<div class="form-group">
-						<label class="control-label col-sm-3">Plan <span
-							class="text-danger">*</span></label>
-						<div class="col-md-8 col-sm-9">
-							<label><input name="plan" type="radio" value="Limited"
-								checked> Limited - $ 10 </label> <label><input
-								name="plan" type="radio" value="UnLimited1">
-								UnLimited1 - $ 15 </label> <label><input name="unlimited2"
-								type="radio" value="plan"> UnLimited2 - $ 20 </label> <label><input
-								name="plan" type="radio" value="UnLimited3">
-								UnLimited3 - $ 25 </label>
-						</div>
-					</div>
+			          <label class="control-label col-sm-3">Plan <span class="text-danger">*</span></label>
+			          <div class="col-md-8 col-sm-9">
+			            <label><input name="plan" type="radio" value="Limited" checked> Limited - $ 10 </label>
+			            <label><input name="plan" type="radio" value="UnLimited1" > UnLimited1 - $ 15 </label>
+			            <label><input name="plan" type="radio" value="UnLimited2" > UnLimited2 - $ 20 </label>
+			            <label><input name="plan" type="radio" value="UnLimited3" > UnLimited3 - $ 25 </label>
+			          </div>
+			        </div>
 					
 					<!-- Text input-->
 					<div class="form-group">

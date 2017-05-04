@@ -12,11 +12,9 @@
     <!-- Menu CSS -->
     <link href="<c:url value="/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" />" rel="stylesheet">
     <!-- toast CSS -->
-    <link href="<c:url value="/plugins/bower_components/toast-master/css/jquery.toast.css" />" rel="stylesheet">
-    
+    <link href="<c:url value="/plugins/bower_components/toast-master/css/jquery.toast.css" />" rel="stylesheet">   
     <!-- morris CSS -->
     <link href="<c:url value="/plugins/bower_components/morrisjs/morris.css" />" rel="stylesheet">
-        
     <!-- chartist CSS -->
     <link href="<c:url value="/plugins/bower_components/chartist-js/dist/chartist.min.css" />" rel="stylesheet">
     <link href="<c:url value="/plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" />" rel="stylesheet">
@@ -25,9 +23,7 @@
     <!-- Custom CSS -->
     <link href="<c:url value="/css/yan.css" />" rel="stylesheet">
     <!-- color CSS -->
-    <link href="<c:url value="/css/default.css" />" rel="stylesheet">
-    
-    
+    <link href="<c:url value="/css/default.css" />" rel="stylesheet">  
 <![endif]-->
 </head>
 

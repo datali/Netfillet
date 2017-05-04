@@ -23,7 +23,7 @@ import com.service.pkg.ValidateUser;
 /**
  * Servlet implementation class LoginServlet
  */
-@WebServlet("/EmployeeRemoveCustServlet")
+@WebServlet("/SignUpServlet")
 public class SignUpServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -44,11 +44,15 @@ public class SignUpServlet extends HttpServlet {
 		Enumeration<String> params = request.getParameterNames(); 
 		while(params.hasMoreElements()){
 			 String paramName = (String)params.nextElement();
-			 if(!request.getParameter(paramName).equals("")){
+			 if(request.getParameter(paramName)!=null && request.getParameter(paramName).isEmpty()){
 				 out.print("Please Enter All Field");
 				 break;
 			 }
+			 else{
+				 out.println("Parameter Name - "+paramName+", Value - "+request.getParameter(paramName));
+			 }
 		}
+		
 		CustomerService custService = new CustomerService();
 		//populate  customer object
 		Customer customer = custService.createUser();		
@@ -65,6 +69,9 @@ public class SignUpServlet extends HttpServlet {
 		
 		// plan for account
 		String plan = request.getParameter("plan");
+		
+		
+		
 	}
 
 	/**
