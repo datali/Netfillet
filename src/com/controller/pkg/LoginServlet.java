@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpSession;
 
 import com.entity.pkg.Customer;
 import com.entity.pkg.Employee;
+import com.entity.pkg.Movie;
 import com.service.pkg.CustomerService;
 import com.service.pkg.EmployeeService;
 import com.service.pkg.MovieService;
@@ -54,18 +56,37 @@ public class LoginServlet extends HttpServlet {
 	    String userType = request.getParameter("userType");
 	    out.print(userType + "not this");
 	    
+	    
+	    
+	    
+	    ArrayList<Movie> movieList = new ArrayList<Movie>();
+		Movie movie1  = new Movie("Logan");
+		Movie movie2 = new Movie("Lala Land");
+		Movie movie3 = new Movie("Bird Man");
+		Movie movie4 = new Movie("Batman- dark knight");
+		Movie movie5 = new Movie("Avengers");
+		movieList.add(movie1);
+		movieList.add(movie2);
+		movieList.add(movie3);
+		movieList.add(movie4);
+		movieList.add(movie5);
+		HttpSession session = request.getSession();
+		session.setAttribute("movieList", movieList);
+	    RequestDispatcher rd=request.getRequestDispatcher("/welcome.jsp");  
+        rd.forward(request,response);
 	    if(userType.equals("customer")){
 	    	CustomerService service = new CustomerService(Integer.parseInt(request.getParameter("id")));
+	    	
 		    if(service.customerExists()){  
 		    	Customer customer = service.createUser();
-		    	HttpSession session = request.getSession();
+		    	 session = request.getSession();
 		    	session.setAttribute("Customer", customer);
-		        RequestDispatcher rd=request.getRequestDispatcher("/videos.jsp");  
+		        //RequestDispatcher rd=request.getRequestDispatcher("/videos.jsp");  
 		        rd.forward(request,response); 
 		    }  
 		    else{  
 		        out.print("User does not exist");  
-		        RequestDispatcher rd=request.getRequestDispatcher("/index.jsp");  
+		        //RequestDispatcher rd=request.getRequestDispatcher("/index.jsp");  
 		        rd.include(request,response);  
 		    }  
 	    }
@@ -74,20 +95,20 @@ public class LoginServlet extends HttpServlet {
 	    	EmployeeService service = new EmployeeService(Integer.parseInt(request.getParameter("id")));
 		    if(service.employeeExists()){  
 		    	Employee employee = service.createEmployee();
-		    	HttpSession session = request.getSession();
+		    	session = request.getSession();
 		    	session.setAttribute("Employee", employee);
 		    	if(employee.isManager()){
-		    		RequestDispatcher rd=request.getRequestDispatcher("/managerwelcome.jsp");
+		    		//RequestDispatcher rd=request.getRequestDispatcher("/managerwelcome.jsp");
 		    		rd.forward(request,response); 
 		    	}
 		    	else{
-		    		RequestDispatcher rd=request.getRequestDispatcher("/employeewelcome.jsp");  
+		    		//RequestDispatcher rd=request.getRequestDispatcher("/employeewelcome.jsp");  
 		    		rd.forward(request,response); 
 		    	}
 		    }  
 		    else{  
 		        out.print("User does not exist");  
-		        RequestDispatcher rd=request.getRequestDispatcher("/index.jsp");  
+		       // RequestDispatcher rd=request.getRequestDispatcher("/index.jsp");  
 		        rd.include(request,response);  
 		    }  
 	    }

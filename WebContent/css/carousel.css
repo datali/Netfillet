@@ -95,7 +95,6 @@ a:hover {
 }
 .tile__details:after,
 .tile__details:before {
-  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -114,7 +113,7 @@ a:hover {
   z-index: 1;
 }
 .tile__details:before {
-  content: '▶';
+  content: "\25B6";
   left: 0;
   width: 100%;
   font-size: 30px;

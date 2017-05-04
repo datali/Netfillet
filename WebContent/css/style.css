@@ -49,7 +49,7 @@ label{
 	background: rgba(255, 255, 255, 0.47);
 }
 .header {
-	background: url('../images/header-bg.jpg') no-repeat 0px 0px;
+	background: url('../images/ironman.jpg') no-repeat 0px 0px;
 	background-size:cover;
 	-webkit-background-size:cover;
 	-moz-background-size:cover;
@@ -355,6 +355,10 @@ i.contact1 {
 #flexiselDemo1, #flexiselDemo2, #flexiselDemo3 {
 	display: none;
 }
+/* #flexiselDemo1 li{
+	padding-left:20px; 
+	padding-right:50px;
+} */
 .nbs-flexisel-container {
 	position: relative;
 	max-width: 100%;
@@ -720,8 +724,7 @@ p.ratingview {
 		.rating > span:hover:before,
 		.rating > span:hover ~ span:before {
 		   content: "\2605";
-		   position: absolute;
-		   left: 0;
+		   
 		   color: gold;
 		}
 p.info {
@@ -1206,8 +1209,106 @@ font-weight: 700;
   font-style: normal;
   width: 20%;
 }
+
+.rent-btn { 
+  color: #FFFFFF; 
+  background-color: #DFB636; 
+  border-color: #DBC47F; 
+} 
+ 
+.rent-btn:hover, 
+.rent-btn:focus, 
+.rent-btn:active, 
+.rent-btn.active, 
+.open .dropdown-toggle.rent-btn { 
+  color: #FFFFFF; 
+  background-color: #D6A100; 
+  border-color: #DBC47F; 
+} 
+ 
+.rent-btn:active, 
+.rent-btn.active, 
+.open .dropdown-toggle.rent-btn { 
+  background-image: none; 
+} 
+ 
+.rent-btn.disabled, 
+.rent-btn[disabled], 
+fieldset[disabled] .rent-btn, 
+.rent-btn.disabled:hover, 
+.rent-btn[disabled]:hover, 
+fieldset[disabled] .rent-btn:hover, 
+.rent-btn.disabled:focus, 
+.rent-btn[disabled]:focus, 
+fieldset[disabled] .rent-btn:focus, 
+.rent-btn.disabled:active, 
+.rent-btn[disabled]:active, 
+fieldset[disabled] .rent-btn:active, 
+.rent-btn.disabled.active, 
+.rent-btn[disabled].active, 
+fieldset[disabled] .rent-btn.active { 
+  background-color: #DFB636; 
+  border-color: #DBC47F; 
+} 
+ 
+.rent-btn .badge { 
+  color: #DFB636; 
+  background-color: #FFFFFF; 
+}
+
+.queue-btn { 
+  color: #ffffff; 
+  background-color: #363636; 
+  border-color: #5C5C5C; 
+} 
+ 
+.queue-btn:hover, 
+.queue-btn:focus, 
+.queue-btn:active, 
+.queue-btn.active, 
+.open .dropdown-toggle.queue-btn { 
+  color: #ffffff; 
+  background-color: #262626; 
+  border-color: #5C5C5C; 
+} 
+ 
+.queue-btn:active, 
+.queue-btn.active, 
+.open .dropdown-toggle.queue-btn { 
+  background-image: none; 
+} 
+ 
+.queue-btn.disabled, 
+.queue-btn[disabled], 
+fieldset[disabled] .queue-btn, 
+.queue-btn.disabled:hover, 
+.queue-btn[disabled]:hover, 
+fieldset[disabled] .queue-btn:hover, 
+.queue-btn.disabled:focus, 
+.queue-btn[disabled]:focus, 
+fieldset[disabled] .queue-btn:focus, 
+.queue-btn.disabled:active, 
+.queue-btn[disabled]:active, 
+fieldset[disabled] .queue-btn:active, 
+.queue-btn.disabled.active, 
+.queue-btn[disabled].active, 
+fieldset[disabled] .queue-btn.active { 
+  background-color: #363636; 
+  border-color: #5C5C5C; 
+} 
+ 
+.queue-btn .badge { 
+  color: #363636; 
+  background-color: #ffffff; 
+}
+
+
 .blog-form input[type="button"]:hover {
 	background: #dfb636;
+}
+.tile__title{
+	color: white;
+	font-size: 200%;
 }
 /*-- responsive-design starts-here --*/
 
